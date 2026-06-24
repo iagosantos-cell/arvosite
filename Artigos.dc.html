@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="responsive.css" />
+  <style>
+    body { margin:0; background:#0D0D10; -webkit-font-smoothing:antialiased; }
+    .arvo-lift { transition: transform 0.2s, box-shadow 0.2s; }
+    .arvo-lift:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(13,13,16,0.10); }
+  </style>
+</helmet>
+
+<div style="font-family:'Space Grotesk',system-ui,sans-serif;background:#F0EFEB;color:#0D0D10;overflow-x:hidden;min-height:100vh;">
+  <dc-import name="Nav" active="conteudos" hint-size="100%,68px"></dc-import>
+
+  <!-- HERO -->
+  <section style="background:#0D0D10;background-image:radial-gradient(ellipse 115% 92% at 50% 0%, rgba(144,43,41,0.82) 0%, rgba(144,43,41,0.34) 45%, transparent 85%);padding:160px 40px 80px;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FF4A2E;margin-bottom:22px;">Conteúdos · Artigos</span>
+      <h1 style="font-size:clamp(38px,5vw,64px);font-weight:700;letter-spacing:-0.035em;line-height:1.05;color:#F0EFEB;max-width:820px;margin:0;">Insights sobre dados, IA e integridade na <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#E5C8C5;font-weight:400;">saúde.</em></h1>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section style="background:#F0EFEB;padding:64px 40px 32px;">
+    <a href="Artigo.dc.html?a=setor-ia" class="arvo-lift" style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:24px;overflow:hidden;text-decoration:none;">
+      <div style="min-height:340px;background:#0D0D10 url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/686fca7c64943beadfcc03c4_thumb-evento-saude-nada-artificial.png') center/cover no-repeat;"></div>
+      <div style="padding:52px 48px;display:flex;flex-direction:column;justify-content:center;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;"><span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#902B29;">Artigo</span><span style="font-size:12px;color:#6B6B72;">· 10/07/2025</span></div>
+        <h2 style="font-size:clamp(24px,2.6vw,34px);font-weight:700;letter-spacing:-0.03em;line-height:1.18;color:#0D0D10;margin:0 0 16px;">Setor de saúde suplementar discute futuro com IA: caminhos para eficiência sem ruptura</h2>
+        <p style="font-size:16px;line-height:1.7;color:#6B6B72;margin:0 0 24px;">O evento “Saúde Nada Artificial”, da Arvo e do Google Cloud, debateu tendências globais e visões práticas sobre como a tecnologia pode contribuir para a eficiência operacional e sustentabilidade do setor.</p>
+        <span style="font-size:14px;font-weight:600;color:#902B29;">Ler artigo →</span>
+      </div>
+    </a>
+  </section>
+
+  <!-- GRID -->
+  <section style="background:#F0EFEB;padding:32px 40px 100px;">
+    <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <a href="Artigo.dc.html?a=rn-623" class="arvo-lift" style="display:flex;flex-direction:column;background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:18px;overflow:hidden;text-decoration:none;">
+        <div style="height:150px;background:#0D0D10 url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/6862e6065eb467cee1dea840_2024.png') center/cover no-repeat;"></div>
+        <div style="padding:26px;display:flex;flex-direction:column;gap:12px;flex:1;">
+          <span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#902B29;">Regulação</span>
+          <div style="font-size:18px;font-weight:600;color:#0D0D10;letter-spacing:-0.01em;line-height:1.3;flex:1;">RN 623/2024: o que muda e quais os impactos para operadoras de saúde</div>
+          <span style="font-size:13px;color:#6B6B72;">30/06/2025</span>
+        </div>
+      </a>
+      <a href="https://www.arvo.com.br/blog/seguranca-de-dados-na-saude-suplementar-o-que-esperar-de-parceiros-de-tecnologia" target="_blank" rel="noopener" class="arvo-lift" style="display:flex;flex-direction:column;background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:18px;overflow:hidden;text-decoration:none;">
+        <div style="height:150px;background:#0D0D10 url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/6849a3dd7bdd1d35e98212e6_Frame%201410103634.avif') center/cover no-repeat;"></div>
+        <div style="padding:26px;display:flex;flex-direction:column;gap:12px;flex:1;">
+          <span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#902B29;">Dados</span>
+          <div style="font-size:18px;font-weight:600;color:#0D0D10;letter-spacing:-0.01em;line-height:1.3;flex:1;">Segurança de dados na saúde suplementar: o que esperar de parceiros de tecnologia</div>
+          <span style="font-size:13px;color:#6B6B72;">11/06/2025</span>
+        </div>
+      </a>
+      <a href="https://www.arvo.com.br/blog/transformacao-digital-na-saude-tendencias-globais-que-estao-moldando-a-saude-suplementar" target="_blank" rel="noopener" class="arvo-lift" style="display:flex;flex-direction:column;background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:18px;overflow:hidden;text-decoration:none;">
+        <div style="height:150px;background:#0D0D10 url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/683a17fd07cf58e12044b9c2_Frame%201410103627.avif') center/cover no-repeat;"></div>
+        <div style="padding:26px;display:flex;flex-direction:column;gap:12px;flex:1;">
+          <span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#902B29;">Mercado</span>
+          <div style="font-size:18px;font-weight:600;color:#0D0D10;letter-spacing:-0.01em;line-height:1.3;flex:1;">Transformação digital na saúde: tendências que estão moldando a saúde suplementar</div>
+          <span style="font-size:13px;color:#6B6B72;">30/05/2025</span>
+        </div>
+      </a>
+      <a href="Artigo.dc.html?a=5-beneficios" class="arvo-lift" style="display:flex;flex-direction:column;background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:18px;overflow:hidden;text-decoration:none;">
+        <div style="height:150px;background:#0D0D10 url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/680fb42eba4a55dc301d14fe_Frame%201410103620.avif') center/cover no-repeat;"></div>
+        <div style="padding:26px;display:flex;flex-direction:column;gap:12px;flex:1;">
+          <span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#902B29;">Auditoria</span>
+          <div style="font-size:18px;font-weight:600;color:#0D0D10;letter-spacing:-0.01em;line-height:1.3;flex:1;">5 benefícios do uso de tecnologia no processo de auditoria</div>
+          <span style="font-size:13px;color:#6B6B72;">20/12/2024</span>
+        </div>
+      </a>
+      <a href="https://www.arvo.com.br/blog/como-a-arvo-ajuda-uma-operadora-de-saude-consolidada" target="_blank" rel="noopener" class="arvo-lift" style="display:flex;flex-direction:column;background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:18px;overflow:hidden;text-decoration:none;">
+        <div style="height:150px;background:#0D0D10 url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/680fb42e5901b4a9fcbfd8b3_Frame%201410103618.avif') center/cover no-repeat;"></div>
+        <div style="padding:26px;display:flex;flex-direction:column;gap:12px;flex:1;">
+          <span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#902B29;">Case</span>
+          <div style="font-size:18px;font-weight:600;color:#0D0D10;letter-spacing:-0.01em;line-height:1.3;flex:1;">Como a Arvo ajudou uma operadora a economizar milhões por mês</div>
+          <span style="font-size:13px;color:#6B6B72;">18/02/2025</span>
+        </div>
+      </a>
+      <a href="MateriaisRicos.dc.html" class="arvo-lift" style="display:flex;flex-direction:column;background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:18px;overflow:hidden;text-decoration:none;">
+        <div style="height:150px;background:#0D0D10 url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/680acf97513c5e83578c8cc7_Frame%201410103624.avif') center/cover no-repeat;"></div>
+        <div style="padding:26px;display:flex;flex-direction:column;gap:12px;flex:1;">
+          <span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#902B29;">eBook</span>
+          <div style="font-size:18px;font-weight:600;color:#0D0D10;letter-spacing:-0.01em;line-height:1.3;flex:1;">5 erros invisíveis na auditoria médica e como a IA pode te ajudar</div>
+          <span style="font-size:13px;color:#6B6B72;">29/04/2025</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,440px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

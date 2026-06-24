@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="responsive.css" />
+  <style>
+    body { margin:0; background:#0D0D10; -webkit-font-smoothing:antialiased; }
+    .arvo-press:hover { border-color: rgba(144,43,41,0.45) !important; transform: translateY(-3px); }
+    .arvo-press { transition: border-color 0.2s, transform 0.2s; }
+  </style>
+</helmet>
+
+<div style="font-family:'Space Grotesk',system-ui,sans-serif;background:#F0EFEB;color:#0D0D10;overflow-x:hidden;">
+  <dc-import name="Nav" active="sobre" hint-size="100%,68px"></dc-import>
+
+  <!-- HERO -->
+  <section style="background:#0D0D10;background-image:radial-gradient(ellipse 115% 92% at 50% 0%, rgba(144,43,41,0.82) 0%, rgba(144,43,41,0.34) 45%, transparent 85%);padding:160px 40px 90px;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FF4A2E;margin-bottom:22px;">Sobre a Arvo</span>
+      <h1 style="font-size:clamp(38px,5vw,66px);font-weight:700;letter-spacing:-0.035em;line-height:1.05;color:#F0EFEB;max-width:880px;margin:0;">A camada de inteligência que torna a saúde mais <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#E5C8C5;font-weight:400;">acessível.</em></h1>
+      <p style="font-size:clamp(16px,1.8vw,20px);font-weight:400;color:rgba(240,239,235,0.62);line-height:1.6;max-width:640px;margin:26px 0 0;">Nascemos para ser a empresa de tecnologia parceira do setor de saúde, aliando infraestrutura de dados e inteligência artificial para otimizar gastos e contribuir com a sustentabilidade do sistema.</p>
+    </div>
+  </section>
+
+  <!-- HISTÓRIA -->
+  <section style="background:#F0EFEB;padding:100px 40px;">
+    <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+      <div>
+        <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#902B29;margin-bottom:18px;">Nossa história</span>
+        <h2 style="font-size:clamp(28px,3.2vw,42px);font-weight:700;letter-spacing:-0.03em;line-height:1.12;color:#0D0D10;margin:0 0 24px;">Um problema complexo. Uma <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#902B29;font-weight:400;">convicção</em> de que tem solução.</h2>
+        <p style="font-size:16px;line-height:1.7;color:#6B6B72;margin:0 0 18px;">O setor de saúde privada no Brasil sofre há anos com desalinhamento de interesse, desperdícios, abusos e fraudes — e as consequências se agravam com o tempo, impactando empresas, planos de saúde, prestadores e o beneficiário final.</p>
+        <p style="font-size:16px;line-height:1.7;color:#6B6B72;margin:0;">É um problema complexo, mas estamos convictos de que tem solução, e de que essa solução passa pela tecnologia. Só descansaremos quando tivermos cumprido a missão de tornar a saúde mais acessível para todos.</p>
+      </div>
+      <div style="border-radius:18px;overflow:hidden;border:1px solid rgba(13,13,16,0.1);box-shadow:0 24px 60px rgba(13,13,16,0.12);aspect-ratio:16/9;background:#0D0D10;">
+        <iframe src="https://www.youtube.com/embed/Kjev3T4rSKU?rel=0" title="História da Arvo" style="width:100%;height:100%;border:0;display:block;" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCÍPIOS -->
+  <section style="background:#0D0D10;padding:100px 40px;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <div style="max-width:680px;margin-bottom:56px;">
+        <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#902B29;margin-bottom:18px;">Princípios de operação</span>
+        <h2 style="font-size:clamp(28px,3.2vw,42px);font-weight:700;letter-spacing:-0.03em;line-height:1.12;color:#F0EFEB;margin:0 0 18px;">Cultura no <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#E5C8C5;font-weight:400;">café da manhã.</em></h2>
+        <p style="font-size:16px;line-height:1.7;color:#6B6B72;margin:0;">Desde o primeiro dia, focamos numa cultura que privilegia o desenvolvimento de todos: nossos clientes, nosso time e os beneficiários das operadoras que atendemos.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+        <div style="padding:26px 24px;background:rgba(240,239,235,0.04);border:1px solid rgba(240,239,235,0.08);border-radius:14px;font-size:16px;font-weight:600;color:#F0EFEB;letter-spacing:-0.01em;">Vivemos na Arena</div>
+        <div style="padding:26px 24px;background:rgba(240,239,235,0.04);border:1px solid rgba(240,239,235,0.08);border-radius:14px;font-size:16px;font-weight:600;color:#F0EFEB;letter-spacing:-0.01em;">Geramos valor — para o cliente, o time e nós, nessa ordem</div>
+        <div style="padding:26px 24px;background:rgba(240,239,235,0.04);border:1px solid rgba(240,239,235,0.08);border-radius:14px;font-size:16px;font-weight:600;color:#F0EFEB;letter-spacing:-0.01em;">Medimos o que tocamos</div>
+        <div style="padding:26px 24px;background:rgba(240,239,235,0.04);border:1px solid rgba(240,239,235,0.08);border-radius:14px;font-size:16px;font-weight:600;color:#F0EFEB;letter-spacing:-0.01em;">Subimos a barra, sempre</div>
+        <div style="padding:26px 24px;background:rgba(240,239,235,0.04);border:1px solid rgba(240,239,235,0.08);border-radius:14px;font-size:16px;font-weight:600;color:#F0EFEB;letter-spacing:-0.01em;">Jogamos a real</div>
+        <div style="padding:26px 24px;background:rgba(144,43,41,0.14);border:1px solid rgba(144,43,41,0.4);border-radius:14px;font-size:16px;font-weight:600;color:#F0EFEB;letter-spacing:-0.01em;">Mentalidade insurgente</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section style="background:#0D0D10;background-image:radial-gradient(ellipse 80% 70% at 50% 50%, rgba(144,43,41,0.16) 0%, transparent 65%);padding:20px 40px 100px;">
+    <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+      <div style="padding:42px 36px;background:rgba(255,255,255,0.05);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(240,239,235,0.1);border-radius:20px;text-align:center;">
+        <div style="font-size:clamp(34px,4.5vw,54px);font-weight:700;letter-spacing:-0.04em;color:#F0EFEB;line-height:1;margin-bottom:12px;">+R$ <span style="color:#FF4A2E;">200bi</span></div>
+        <div style="font-size:14px;color:#6B6B72;line-height:1.5;">em valor total de sinistro processado</div>
+      </div>
+      <div style="padding:42px 36px;background:rgba(255,255,255,0.05);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(240,239,235,0.1);border-radius:20px;text-align:center;">
+        <div style="font-size:clamp(34px,4.5vw,54px);font-weight:700;letter-spacing:-0.04em;color:#F0EFEB;line-height:1;margin-bottom:12px;"><span style="color:#FF4A2E;">+85%</span></div>
+        <div style="font-size:14px;color:#6B6B72;line-height:1.5;">de precisão nos Smart Agents</div>
+      </div>
+      <div style="padding:42px 36px;background:rgba(255,255,255,0.05);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(240,239,235,0.1);border-radius:20px;text-align:center;">
+        <div style="font-size:clamp(34px,4.5vw,54px);font-weight:700;letter-spacing:-0.04em;color:#F0EFEB;line-height:1;margin-bottom:12px;"><span style="color:#FF4A2E;">+250M</span></div>
+        <div style="font-size:14px;color:#6B6B72;line-height:1.5;">de contas médicas processadas</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARVO NA MÍDIA -->
+  <section style="background:#F0EFEB;padding:100px 40px;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <div style="margin-bottom:48px;">
+        <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#902B29;margin-bottom:18px;">Arvo na mídia</span>
+        <h2 style="font-size:clamp(28px,3.2vw,42px);font-weight:700;letter-spacing:-0.03em;line-height:1.12;color:#0D0D10;margin:0;">O que a <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#902B29;font-weight:400;">imprensa</em> tem falado.</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+        <a class="arvo-press" href="https://www.bloomberglinea.com.br/startups/arvo-capta-r-106-mi-em-rodada-com-kaszek-e-base-10-para-coibir-fraudes-na-saude/" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:14px;background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:16px;padding:28px;text-decoration:none;min-height:200px;">
+          <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#902B29;">Bloomberg Línea</span>
+          <span style="font-size:18px;font-weight:600;color:#0D0D10;line-height:1.3;letter-spacing:-0.01em;flex:1;">Arvo capta R$ 106 mi em rodada com Kaszek e Base10 para coibir fraudes na saúde</span>
+          <span style="font-size:13px;font-weight:600;color:#902B29;">Ler matéria →</span>
+        </a>
+        <a class="arvo-press" href="https://valor.globo.com/empresas/noticia/2024/09/04/startup-de-saude-arvo-tem-aporte-de-r-25-milhoes.ghtml" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:14px;background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:16px;padding:28px;text-decoration:none;min-height:200px;">
+          <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#902B29;">Valor Econômico</span>
+          <span style="font-size:18px;font-weight:600;color:#0D0D10;line-height:1.3;letter-spacing:-0.01em;flex:1;">Startup de saúde Arvo tem aporte de R$ 25 milhões</span>
+          <span style="font-size:13px;font-weight:600;color:#902B29;">Ler matéria →</span>
+        </a>
+        <a class="arvo-press" href="https://exame.com/negocios/startup-arvo-capta-r-25-milhoes-para-ajudar-operadoras-de-saude-a-nao-serem-passadas-para-tras/" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:14px;background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:16px;padding:28px;text-decoration:none;min-height:200px;">
+          <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#902B29;">Exame</span>
+          <span style="font-size:18px;font-weight:600;color:#0D0D10;line-height:1.3;letter-spacing:-0.01em;flex:1;">A startup que quer livrar operadoras de saúde de "enrascadas" financeiras</span>
+          <span style="font-size:13px;font-weight:600;color:#902B29;">Ler matéria →</span>
+        </a>
+        <a class="arvo-press" href="https://oglobo.globo.com/blogs/miriam-leitao/post/2025/04/associacao-de-planos-de-saude-investe-em-plataforma-com-inteligencia-artificial-para-identificacao-de-fraudes.ghtml" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:14px;background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:16px;padding:28px;text-decoration:none;min-height:200px;">
+          <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#902B29;">O Globo</span>
+          <span style="font-size:18px;font-weight:600;color:#0D0D10;line-height:1.3;letter-spacing:-0.01em;flex:1;">Associação de planos investe em plataforma com IA para identificar fraudes</span>
+          <span style="font-size:13px;font-weight:600;color:#902B29;">Ler matéria →</span>
+        </a>
+        <a class="arvo-press" href="https://www.saudebusiness.com/mercado-da-saude/parceria-entre-abramge-e-arvo-reforca-combate-a-fraudes-na-saude-suplementar/" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:14px;background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:16px;padding:28px;text-decoration:none;min-height:200px;">
+          <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#902B29;">Saúde Business</span>
+          <span style="font-size:18px;font-weight:600;color:#0D0D10;line-height:1.3;letter-spacing:-0.01em;flex:1;">Parceria entre Abramge e Arvo reforça combate a fraudes na saúde suplementar</span>
+          <span style="font-size:13px;font-weight:600;color:#902B29;">Ler matéria →</span>
+        </a>
+        <a class="arvo-press" href="https://drive.google.com/file/d/1CUVYDKMtqTOHbzsRUvMQEl4OFU99zi68/view" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:14px;background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:16px;padding:28px;text-decoration:none;min-height:200px;">
+          <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#902B29;">Fortune</span>
+          <span style="font-size:18px;font-weight:600;color:#0D0D10;line-height:1.3;letter-spacing:-0.01em;flex:1;">Arvo, a São Paulo-based healthcare transactions AI platform, raised R$ 25 million in funding</span>
+          <span style="font-size:13px;font-weight:600;color:#902B29;">Ler matéria →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:#F0EFEB;padding:0 40px 100px;">
+    <div style="max-width:1160px;margin:0 auto;background:#0D0D10;border-radius:24px;padding:64px 56px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:32px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;width:55%;height:100%;background:radial-gradient(ellipse 90% 100% at 0% 50%, rgba(144,43,41,0.62) 0%, rgba(144,43,41,0.2) 45%, transparent 80%);pointer-events:none;"></div>
+      <h2 style="position:relative;z-index:1;font-size:clamp(26px,3vw,38px);font-weight:700;letter-spacing:-0.03em;color:#F0EFEB;line-height:1.12;margin:0;max-width:560px;">Quer conhecer a Arvo <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#E5C8C5;font-weight:400;">de perto?</em></h2>
+      <a href="https://wa.me/5511936196457?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20Arvo!" target="_blank" rel="noopener" style="position:relative;z-index:1;font-size:15px;font-weight:600;color:#F0EFEB;background:#902B29;padding:16px 32px;border-radius:11px;text-decoration:none;white-space:nowrap;">Falar com a Arvo</a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,440px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

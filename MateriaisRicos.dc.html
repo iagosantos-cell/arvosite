@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="responsive.css" />
+  <style>
+    body { margin:0; background:#0D0D10; -webkit-font-smoothing:antialiased; }
+    .arvo-lift { transition: transform 0.2s, box-shadow 0.2s; }
+    .arvo-lift:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(13,13,16,0.10); }
+  </style>
+</helmet>
+
+<div style="font-family:'Space Grotesk',system-ui,sans-serif;background:#F0EFEB;color:#0D0D10;overflow-x:hidden;min-height:100vh;">
+  <dc-import name="Nav" active="conteudos" hint-size="100%,68px"></dc-import>
+
+  <!-- HERO -->
+  <section style="background:#0D0D10;background-image:radial-gradient(ellipse 115% 92% at 50% 0%, rgba(144,43,41,0.82) 0%, rgba(144,43,41,0.34) 45%, transparent 85%);padding:160px 40px 80px;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FF4A2E;margin-bottom:22px;">Conteúdos · Materiais Ricos</span>
+      <h1 style="font-size:clamp(38px,5vw,64px);font-weight:700;letter-spacing:-0.035em;line-height:1.05;color:#F0EFEB;max-width:880px;margin:0;">Artigos, ebooks, webinars e workshops para quem cuida da <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#E5C8C5;font-weight:400;">saúde da operadora.</em></h1>
+      <p style="font-size:clamp(16px,1.8vw,20px);font-weight:400;color:rgba(240,239,235,0.62);line-height:1.6;max-width:640px;margin:24px 0 0;">Conhecimento aplicado sobre integridade de pagamentos, auditoria em escala e inteligência de dados no setor de saúde.</p>
+    </div>
+  </section>
+
+  <!-- LISTAGEM -->
+  <section style="background:#F0EFEB;padding:56px 40px 100px;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px;">
+        <button type="button" onClick="{{ filterTodos }}" style="{{ chipTodos }}">Todos</button>
+        <button type="button" onClick="{{ filterArtigo }}" style="{{ chipArtigo }}">Artigos</button>
+        <button type="button" onClick="{{ filterEbook }}" style="{{ chipEbook }}">Ebooks</button>
+        <button type="button" onClick="{{ filterWebinar }}" style="{{ chipWebinar }}">Webinars</button>
+        <button type="button" onClick="{{ filterWorkshop }}" style="{{ chipWorkshop }}">Workshops</button>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+        <sc-for list="{{ materials }}" as="m" hint-placeholder-count="6">
+          <a class="arvo-lift" href="{{ m.url }}" target="{{ m.target }}" rel="noopener" style="display:flex;flex-direction:column;background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:18px;overflow:hidden;text-decoration:none;">
+            <div style="height:150px;display:flex;align-items:flex-end;padding:18px;background:{{ m.cover }};">
+              <span style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#F0EFEB;background:rgba(13,13,16,0.28);padding:5px 11px;border-radius:100px;backdrop-filter:blur(6px);">{{ m.typeLabel }}</span>
+            </div>
+            <div style="padding:24px;display:flex;flex-direction:column;gap:10px;flex:1;">
+              <div style="font-size:17px;font-weight:600;color:#0D0D10;letter-spacing:-0.01em;line-height:1.3;">{{ m.title }}</div>
+              <div style="font-size:13px;color:#6B6B72;line-height:1.6;flex:1;">{{ m.desc }}</div>
+              <span style="font-size:13px;font-weight:600;color:#902B29;margin-top:6px;">{{ m.cta }}</span>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,440px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { filter: 'todos' };
+  all = [
+    { type:'artigo', typeLabel:'Artigo', target:'_self', cover:"url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/6882aac5542ba3c43b4732c8_blogpost-saude-nada-artificial.avif') center/cover", title:'Setor de saúde suplementar discute o futuro com IA', desc:'Evento “Saúde Nada Artificial”, da Arvo e do Google Cloud, debateu caminhos para eficiência sem ruptura.', cta:'Ler artigo →', url:'Artigo.dc.html?a=setor-ia' },
+    { type:'artigo', typeLabel:'Artigo', target:'_self', cover:"url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/6862e3cf2b752bf2ed72b661_blogpost-RN%20623%3A2024.avif') center/cover", title:'RN 623/2024: o que muda e os impactos para operadoras', desc:'Como a nova norma da ANS eleva a exigência por eficiência, transparência e centralidade no cuidado.', cta:'Ler artigo →', url:'Artigo.dc.html?a=rn-623' },
+    { type:'artigo', typeLabel:'Artigo', target:'_self', cover:"url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/681136f0d8d9f07a84be332c_blogpost--header-artigo.avif') center/cover", title:'5 benefícios do uso de tecnologia na auditoria de operadoras', desc:'Entenda as melhorias proporcionadas dentro da área de auditoria de operadoras de saúde.', cta:'Ler artigo →', url:'Artigo.dc.html?a=5-beneficios' },
+    { type:'ebook', typeLabel:'Ebook', target:'_blank', cover:"url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/680acf97513c5e83578c8cc7_Frame%201410103624.avif') center/cover", title:'5 Erros invisíveis na Auditoria Médica e como a IA pode te ajudar', desc:'Com o apoio de IESS e ABRAMGE, este eBook reúne os 5 erros invisíveis mais comuns na auditoria médica.', cta:'Fazer download →', url:'https://www.arvo.com.br/ebook-5erros-invisiveis' },
+    { type:'webinar', typeLabel:'Webinar', target:'_blank', cover:"url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/680fb42dcc4064bb412dac16_Frame%201410103621.avif') center/cover", title:'Estratégia de Operações: como a inovação em auditoria pode impulsionar a qualidade assistencial', desc:'Bate-papo com Fabrício Valadão, dra. Goldete Priszkulnik e Werner Dalla na Semana da Saúde.', cta:'Assistir ao vídeo →', url:'https://www.arvo.com.br/webinar-semana-da-saude' },
+    { type:'workshop', typeLabel:'Workshop', target:'_blank', cover:"url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/680fb42e60ef42fc020c1753_Frame%201410103623.avif') center/cover", title:'Erros Invisíveis: como a IA pode ser sua lupa na auditoria médica', desc:'Descubra como ter mais assertividade na análise de altos volumes de contas, com Rafael Tinoco e Fernanda Naira.', cta:'Assistir ao vídeo →', url:'https://www.arvo.com.br/erros-invisiveis-inscricao' },
+  ];
+  renderVals() {
+    const f = this.state.filter;
+    const set = (k) => () => this.setState({ filter: k });
+    const chip = (k) => {
+      const on = f === k;
+      return 'font-family:Space Grotesk,sans-serif;font-size:13px;font-weight:600;cursor:pointer;padding:9px 18px;border-radius:100px;letter-spacing:0.01em;border:1px solid ' +
+        (on ? '#902B29;background:#902B29;color:#F0EFEB;' : 'rgba(13,13,16,0.12);background:transparent;color:#6B6B72;');
+    };
+    return {
+      materials: f === 'todos' ? this.all : this.all.filter(m => m.type === f),
+      filterTodos: set('todos'), filterArtigo: set('artigo'), filterEbook: set('ebook'), filterWebinar: set('webinar'), filterWorkshop: set('workshop'),
+      chipTodos: chip('todos'), chipArtigo: chip('artigo'), chipEbook: chip('ebook'), chipWebinar: chip('webinar'), chipWorkshop: chip('workshop'),
+    };
+  }
+}
+</script>
+</body>
+</html>

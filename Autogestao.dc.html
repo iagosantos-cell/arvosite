@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="responsive.css" />
+  <style>
+    body { margin:0; background:#0D0D10; -webkit-font-smoothing:antialiased; }
+    .arvo-lift { transition: transform 0.2s, box-shadow 0.2s; }
+    .arvo-lift:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(13,13,16,0.10); }
+  </style>
+</helmet>
+
+<div style="font-family:'Space Grotesk',system-ui,sans-serif;background:#F0EFEB;color:#0D0D10;overflow-x:hidden;">
+  <dc-import name="Nav" active="modelos" hint-size="100%,68px"></dc-import>
+
+  <!-- HERO -->
+  <section style="background:#0D0D10;background-image:radial-gradient(ellipse 115% 92% at 50% 0%, rgba(144,43,41,0.82) 0%, rgba(144,43,41,0.34) 45%, transparent 85%);padding:160px 40px 100px;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FF4A2E;margin-bottom:22px;">Modelos · Autogestão</span>
+      <h1 style="font-size:clamp(36px,4.8vw,62px);font-weight:700;letter-spacing:-0.035em;line-height:1.06;color:#F0EFEB;max-width:920px;margin:0;">A sustentabilidade da sua autogestão depende de uma <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#E5C8C5;font-weight:400;">auditoria inteligente.</em></h1>
+      <p style="font-size:clamp(16px,1.8vw,20px);font-weight:400;color:rgba(240,239,235,0.62);line-height:1.6;max-width:660px;margin:26px 0 36px;">A IA da Arvo analisa 100% das contas médicas, evitando fraudes e desperdícios que comprometem a operação e a confiança da patrocinadora.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="Home.dc.html#contato" style="font-size:15px;font-weight:600;color:#F0EFEB;background:#902B29;padding:15px 30px;border-radius:11px;text-decoration:none;">Fale com um especialista</a>
+        <a href="#pilares" style="font-size:15px;font-weight:500;color:rgba(240,239,235,0.72);background:rgba(240,239,235,0.06);border:1px solid rgba(240,239,235,0.14);padding:15px 30px;border-radius:11px;text-decoration:none;">Saiba mais</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESAFIO / STATS ANS -->
+  <section style="background:#F0EFEB;padding:100px 40px 80px;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <h2 style="font-size:clamp(26px,3vw,40px);font-weight:700;letter-spacing:-0.03em;line-height:1.14;color:#0D0D10;max-width:760px;margin:0 0 48px;">Garantir a sustentabilidade financeira nunca foi tão <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#902B29;font-weight:400;">urgente</em> para as autogestões.</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+        <div style="background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:18px;padding:38px 32px;"><div style="font-size:clamp(40px,5vw,58px);font-weight:700;letter-spacing:-0.04em;color:#902B29;line-height:1;margin-bottom:14px;">63%</div><div style="font-size:15px;color:#6B6B72;line-height:1.5;">operadoras com resultado negativo</div></div>
+        <div style="background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:18px;padding:38px 32px;"><div style="font-size:clamp(40px,5vw,58px);font-weight:700;letter-spacing:-0.04em;color:#902B29;line-height:1;margin-bottom:14px;">-R$ 3,1bi</div><div style="font-size:15px;color:#6B6B72;line-height:1.5;">prejuízo operacional</div></div>
+        <div style="background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:18px;padding:38px 32px;"><div style="font-size:clamp(40px,5vw,58px);font-weight:700;letter-spacing:-0.04em;color:#902B29;line-height:1;margin-bottom:14px;">94%</div><div style="font-size:15px;color:#6B6B72;line-height:1.5;">sinistralidade média</div></div>
+      </div>
+      <p style="font-size:12px;color:#9A9AA0;margin:20px 0 0;">Fontes: Painel Econômico Financeiro da ANS, ano 2025.</p>
+    </div>
+  </section>
+
+  <!-- PILARES + ROI -->
+  <section id="pilares" style="background:#0D0D10;padding:100px 40px;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <h2 style="font-size:clamp(26px,3vw,40px);font-weight:700;letter-spacing:-0.03em;line-height:1.14;color:#F0EFEB;max-width:760px;margin:0 0 48px;">IA para elevar o padrão de <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#E5C8C5;font-weight:400;">governança e transparência</em> da sua autogestão.</h2>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:32px;">
+        <div style="background:rgba(240,239,235,0.04);border:1px solid rgba(240,239,235,0.08);border-radius:18px;padding:36px;"><div style="font-size:13px;font-weight:700;color:#FF4A2E;margin-bottom:16px;">01</div><div style="font-size:19px;font-weight:600;color:#F0EFEB;letter-spacing:-0.02em;margin-bottom:10px;line-height:1.25;">Auditoria mais efetiva, sem aumentar equipe</div><p style="font-size:15px;line-height:1.65;color:#6B6B72;margin:0;">Os Smart Agents da Arvo analisam 100% das contas médicas, garantindo que todo pagamento, de fato, gere saúde para o beneficiário.</p></div>
+        <div style="background:rgba(240,239,235,0.04);border:1px solid rgba(240,239,235,0.08);border-radius:18px;padding:36px;"><div style="font-size:13px;font-weight:700;color:#FF4A2E;margin-bottom:16px;">02</div><div style="font-size:19px;font-weight:600;color:#F0EFEB;letter-spacing:-0.02em;margin-bottom:10px;line-height:1.25;">Embasamento técnico em cada decisão</div><p style="font-size:15px;line-height:1.65;color:#6B6B72;margin:0;">Nossos Smart Agents garantem rastreabilidade e fundamentação técnica, assegurando consistência na auditoria de contas e transparência para o conselho.</p></div>
+        <div style="background:rgba(240,239,235,0.04);border:1px solid rgba(240,239,235,0.08);border-radius:18px;padding:36px;"><div style="font-size:13px;font-weight:700;color:#FF4A2E;margin-bottom:16px;">03</div><div style="font-size:19px;font-weight:600;color:#F0EFEB;letter-spacing:-0.02em;margin-bottom:10px;line-height:1.25;">Sustentabilidade em carteiras de alta complexidade</div><p style="font-size:15px;line-height:1.65;color:#6B6B72;margin:0;">Em carteiras mais maduras, o custo assistencial pressiona o resultado operacional. A IA da Arvo identifica comportamentos indevidos na rede credenciada, protegendo o fundo.</p></div>
+        <div style="background:rgba(240,239,235,0.04);border:1px solid rgba(240,239,235,0.08);border-radius:18px;padding:36px;"><div style="font-size:13px;font-weight:700;color:#FF4A2E;margin-bottom:16px;">04</div><div style="font-size:19px;font-weight:600;color:#F0EFEB;letter-spacing:-0.02em;margin-bottom:10px;line-height:1.25;">Segurança e conformidade regulatória</div><p style="font-size:15px;line-height:1.65;color:#6B6B72;margin:0;">Nossa IA proprietária garante conformidade com as regras da ANS e os acordos contratuais com prestadores, reduzindo exposição a pagamentos indevidos.</p></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:24px;background:linear-gradient(90deg, rgba(144,43,41,0.5), rgba(144,43,41,0.12));border:1px solid rgba(255,74,46,0.25);border-radius:18px;padding:32px 40px;flex-wrap:wrap;">
+        <div style="font-size:clamp(40px,5vw,60px);font-weight:700;letter-spacing:-0.04em;color:#FF4A2E;line-height:1;">5,8x</div>
+        <div style="font-size:17px;font-weight:500;color:#F0EFEB;line-height:1.4;max-width:520px;">É o ROI alcançado por Autogestões que usam a IA da Arvo na operação.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SMART AGENTS -->
+  <section id="agents" style="background:#F0EFEB;padding:100px 40px;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#902B29;margin-bottom:18px;">Smart Agents</span>
+      <h2 style="font-size:clamp(26px,3vw,40px);font-weight:700;letter-spacing:-0.03em;line-height:1.14;color:#0D0D10;max-width:720px;margin:0 0 16px;">As inteligências da Arvo vão muito além de <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#902B29;font-weight:400;">regras prontas.</em></h2>
+      <p style="font-size:16px;line-height:1.65;color:#6B6B72;max-width:620px;margin:0 0 48px;">Os Smart Agents identificam os principais tipos de pagamentos indevidos concentrados nas contas médicas, com precisão que a análise manual não alcança.</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+        <div class="arvo-lift" style="background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:16px;overflow:hidden;"><div onClick="{{ openZoom }}" data-img="https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/69cc2d4d31801c71c954c0ca_conform_reg.jpg" style="height:120px;background:url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/69cc2d4d31801c71c954c0ca_conform_reg.jpg') center/cover;cursor:zoom-in;"></div><div style="padding:22px;"><div style="font-size:16px;font-weight:600;color:#0D0D10;letter-spacing:-0.01em;margin-bottom:6px;">Conformidade Regulatória</div><div style="font-size:13px;color:#6B6B72;line-height:1.55;">Normas da ANS e padrão TISS.</div></div></div>
+        <div class="arvo-lift" style="background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:16px;overflow:hidden;"><div onClick="{{ openZoom }}" data-img="https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/69cc2d4e41c27df7bd8b051b_conform_con.jpg" style="height:120px;background:url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/69cc2d4e41c27df7bd8b051b_conform_con.jpg') center/cover;cursor:zoom-in;"></div><div style="padding:22px;"><div style="font-size:16px;font-weight:600;color:#0D0D10;letter-spacing:-0.01em;margin-bottom:6px;">Conformidade Contratual</div><div style="font-size:13px;color:#6B6B72;line-height:1.55;">Contratos e tabelas negociadas.</div></div></div>
+        <div class="arvo-lift" style="background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:16px;overflow:hidden;"><div onClick="{{ openZoom }}" data-img="https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/69cc2d4e293ccab3ff211e5e_perti.jpg" style="height:120px;background:url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/69cc2d4e293ccab3ff211e5e_perti.jpg') center/cover;cursor:zoom-in;"></div><div style="padding:22px;"><div style="font-size:16px;font-weight:600;color:#0D0D10;letter-spacing:-0.01em;margin-bottom:6px;">Pertinência da Cobrança</div><div style="font-size:13px;color:#6B6B72;line-height:1.55;">Pertinência clínica e quantidades.</div></div></div>
+        <div class="arvo-lift" style="background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:16px;overflow:hidden;"><div onClick="{{ openZoom }}" data-img="https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/69cc2d4e9b7ae772d97f5c25_comport.jpg" style="height:120px;background:url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/69cc2d4e9b7ae772d97f5c25_comport.jpg') center/cover;cursor:zoom-in;"></div><div style="padding:22px;"><div style="font-size:16px;font-weight:600;color:#0D0D10;letter-spacing:-0.01em;margin-bottom:6px;">Comportamento Indevido</div><div style="font-size:13px;color:#6B6B72;line-height:1.55;">Padrões suspeitos e anomalias.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA + ERPs -->
+  <section id="como" style="background:#0D0D10;padding:100px 40px;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <h2 style="font-size:clamp(26px,3vw,40px);font-weight:700;letter-spacing:-0.03em;line-height:1.14;color:#F0EFEB;max-width:720px;margin:0 0 16px;">Da integração aos primeiros resultados em <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#E5C8C5;font-weight:400;">semanas.</em></h2>
+      <p style="font-size:16px;line-height:1.65;color:#6B6B72;max-width:620px;margin:0 0 56px;">A Arvo se conecta aos processos da sua operadora sem a necessidade de trocar sistemas, gerando economia real em poucas semanas.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:64px;">
+        <div><div style="width:44px;height:44px;border-radius:50%;background:#902B29;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#F0EFEB;margin-bottom:24px;">1</div><div style="font-size:19px;font-weight:600;color:#F0EFEB;letter-spacing:-0.02em;margin-bottom:12px;">Integração</div><p style="font-size:15px;line-height:1.65;color:#6B6B72;margin:0;">Conexão plug & play ao ERP da operadora, com suporte dedicado para garantir a integração total de forma fluida.</p></div>
+        <div><div style="width:44px;height:44px;border-radius:50%;background:#902B29;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#F0EFEB;margin-bottom:24px;">2</div><div style="font-size:19px;font-weight:600;color:#F0EFEB;letter-spacing:-0.02em;margin-bottom:12px;">Imersão na operação</div><p style="font-size:15px;line-height:1.65;color:#6B6B72;margin:0;">Os Smart Agents são calibrados às regras de negócio, contratos e particularidades da sua operação.</p></div>
+        <div><div style="width:44px;height:44px;border-radius:50%;background:#902B29;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#F0EFEB;margin-bottom:24px;">3</div><div style="font-size:19px;font-weight:600;color:#F0EFEB;letter-spacing:-0.02em;margin-bottom:12px;">Economia imediata</div><p style="font-size:15px;line-height:1.65;color:#6B6B72;margin:0;">Análise de contas médicas em escala, identificando pagamentos indevidos e não conformidades — gerando economia desde as primeiras semanas.</p></div>
+      </div>
+      <div style="border-top:1px solid rgba(240,239,235,0.08);padding-top:40px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B72;margin-bottom:24px;">Integração com os principais ERPs do mercado</div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <div style="height:64px;flex:1;min-width:140px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:0 24px;"><img src="https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/69c43b5d97a6218782385e03_tasy.png" alt="Tasy" style="max-height:30px;max-width:100%;object-fit:contain;" /></div>
+          <div style="height:64px;flex:1;min-width:140px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:0 24px;"><img src="https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/69c43b5dcbf9bf33a21926ca_Solus.png" alt="Solus" style="max-height:30px;max-width:100%;object-fit:contain;" /></div>
+          <div style="height:64px;flex:1;min-width:140px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:0 24px;"><img src="https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/69c43b5d502472cb2b762765_Facil.png" alt="Fácil" style="max-height:30px;max-width:100%;object-fit:contain;" /></div>
+          <div style="height:64px;flex:1;min-width:140px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:0 24px;"><img src="https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/69c43b5d0c7bf2d85292342d_totvs.png" alt="TOTVS" style="max-height:28px;max-width:100%;object-fit:contain;" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS EM VÍDEO -->
+  <section id="cases" style="background:#F0EFEB;padding:100px 40px;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <h2 style="font-size:clamp(26px,3vw,40px);font-weight:700;letter-spacing:-0.03em;line-height:1.14;color:#0D0D10;max-width:720px;margin:0 0 48px;">Veja o que <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#902B29;font-weight:400;">lideranças de operadoras</em> estão dizendo sobre a Arvo.</h2>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;">
+        <div style="background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:16/9;background:#0D0D10;"><iframe src="https://www.youtube.com/embed/Gz1kwqHZznk?rel=0" title="Depoimento · Vivest" style="width:100%;height:100%;border:0;display:block;" allowfullscreen></iframe></div>
+          <div style="padding:30px;">
+            <p style="font-size:15px;line-height:1.65;color:#3A3A40;margin:0 0 20px;">"Com a IA da Arvo, identificamos melhorias em processos, ajustes operacionais e auditorias que precisavam ser retreinadas. O resultado foi muito além do apontamento de glosas: as inteligências da Arvo se conectam a outros processos e sistemas, tornando a jornada de auditoria muito mais eficiente."</p>
+            <div style="font-size:15px;font-weight:700;color:#0D0D10;">Regina Mello</div>
+            <div style="font-size:13px;color:#6B6B72;margin-top:2px;">Gerente Executiva de Saúde · Vivest</div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:16/9;overflow:hidden;background:#0D0D10;"><img src="https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/69c3dc512db5d22090cdd4c9_aBERTTA.png" alt="Werner Dalla · Abertta" style="width:100%;height:100%;object-fit:cover;" /></div>
+          <div style="padding:30px;">
+            <p style="font-size:15px;line-height:1.65;color:#3A3A40;margin:0 0 20px;">"A Arvo tem sido um parceiro com ganhos efetivos desde o início da parceria. Com processos ágeis, proximidade e acompanhamento sistemático da implantação, tem impactado positivamente nosso processo de análise de contas médicas."</p>
+            <div style="font-size:15px;font-weight:700;color:#0D0D10;">Werner Dalla</div>
+            <div style="font-size:13px;color:#6B6B72;margin-top:2px;">Diretor Presidente · Abertta Saúde</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" style="background:#F0EFEB;padding:0 40px 100px;">
+    <div style="max-width:1160px;margin:0 auto;background:#0D0D10;border-radius:24px;padding:64px 56px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:32px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;width:55%;height:100%;background:radial-gradient(ellipse 90% 100% at 0% 50%, rgba(144,43,41,0.62) 0%, rgba(144,43,41,0.2) 45%, transparent 80%);pointer-events:none;"></div>
+      <div style="position:relative;z-index:1;max-width:600px;"><h2 style="font-size:clamp(26px,3vw,38px);font-weight:700;letter-spacing:-0.03em;color:#F0EFEB;line-height:1.12;margin:0;">Descubra onde estão os <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#E5C8C5;font-weight:400;">desperdícios</em> da sua operação.</h2><p style="font-size:15px;color:#6B6B72;margin:12px 0 0;">Fale com um de nossos especialistas em Autogestão.</p></div>
+      <a href="Home.dc.html#contato" style="position:relative;z-index:1;font-size:15px;font-weight:600;color:#F0EFEB;background:#902B29;padding:16px 32px;border-radius:11px;text-decoration:none;white-space:nowrap;">Falar com um especialista</a>
+    </div>
+  </section>
+
+  <div onClick="{{ closeZoom }}" style="{{ zoomStyle }}"><img src="{{ zoomSrc }}" alt="" style="max-width:92vw;max-height:90vh;border-radius:14px;box-shadow:0 30px 90px rgba(0,0,0,0.6);" /></div>
+  <dc-import name="Footer" hint-size="100%,440px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { zoom: null };
+  renderVals() {
+    return {
+      openZoom: (e) => { this.setState({ zoom: e.currentTarget.getAttribute('data-img') }); },
+      closeZoom: () => this.setState({ zoom: null }),
+      zoomSrc: this.state.zoom || 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+      zoomStyle: 'position:fixed;inset:0;z-index:3000;background:rgba(13,13,16,0.85);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:32px;cursor:zoom-out;' + (this.state.zoom ? 'display:flex;' : 'display:none;'),
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="responsive.css" />
+  <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
+  <style>
+    body { margin:0; background:#F0EFEB; -webkit-font-smoothing:antialiased; }
+    #hs-form-container .hs-form-field{margin-bottom:14px;}
+    #hs-form-container label{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;color:#F0EFEB;margin-bottom:6px;display:block;}
+    #hs-form-container input:not([type=checkbox]):not([type=radio]),#hs-form-container select,#hs-form-container textarea{width:100%;box-sizing:border-box;font-family:'Space Grotesk',sans-serif;font-size:14px;padding:11px 13px;border:1px solid rgba(240,239,235,0.18);border-radius:9px;background:#1F1F26;color:#F0EFEB;}
+    #hs-form-container .hs-form-booleancheckbox-display{display:flex;align-items:flex-start;gap:9px;line-height:1.45;}
+    #hs-form-container .hs-form-booleancheckbox-display>span{display:inline;font-size:13px;color:rgba(240,239,235,0.7);}
+    #hs-form-container input[type=checkbox],#hs-form-container input[type=radio]{width:auto;margin-top:3px;flex-shrink:0;}
+    #hs-form-container input::placeholder,#hs-form-container textarea::placeholder{color:rgba(240,239,235,0.4);}
+    #hs-form-container .hs-button{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;color:#F0EFEB;background:#902B29;border:none;padding:14px 26px;border-radius:11px;cursor:pointer;width:100%;margin-top:6px;}
+    #hs-form-container .hs-button:hover{background:#a83230;}
+    #hs-form-container .hs-error-msgs{list-style:none;padding:0;margin:6px 0 0;}
+    #hs-form-container .hs-error-msg,#hs-form-container .hs-error-msgs label{font-size:12px;color:#FF6B5E;font-weight:500;}
+    @keyframes arvoPulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:0.5;transform:scale(0.8);} }
+    @keyframes arvoMarquee { from{transform:translateX(0);} to{transform:translateX(-50%);} }
+    @keyframes arvoAurora { 0%{opacity:1;transform:scale(1) translateY(0);} 50%{opacity:0.85;transform:scale(1.04) translateY(-12px);} 100%{opacity:1;transform:scale(1) translateY(0);} }
+    @keyframes arvoProgress { 0%{width:0%;opacity:1;} 70%{width:85%;opacity:1;} 100%{width:100%;opacity:0;} }
+    @keyframes arvoLine { 0%{background-position:-40% 0;} 100%{background-position:140% 0;} }
+    .arvo-lift { transition: transform 0.2s, box-shadow 0.2s; }
+    .arvo-lift:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(13,13,16,0.10); }
+    .arvo-proof:hover { animation-play-state: paused; }
+  </style>
+</helmet>
+
+<div style="font-family:'Space Grotesk',system-ui,sans-serif;background:#F0EFEB;color:#0D0D10;overflow-x:hidden;">
+
+  <dc-import name="Nav" active="home" hint-size="100%,68px"></dc-import>
+
+  <!-- HERO -->
+  <section style="min-height:100vh;background:url('assets/brand.png') center/cover no-repeat;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:104px 24px 60px;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 22%, rgba(144,43,41,0.40) 0%, transparent 65%);pointer-events:none;animation:arvoAurora 12s ease-in-out infinite alternate;"></div>
+    <div style="position:relative;z-index:1;margin-bottom:28px;">
+      <svg viewBox="0 0 947 368" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:72px;width:auto;display:block;"><path fill-rule="evenodd" clip-rule="evenodd" d="M189.526 6.05698C175.538 -2.01899 158.304 -2.01899 144.315 6.05698L22.6059 76.3234C8.61726 84.3994 0 99.3245 0 115.476V255.702C0 271.855 8.61728 286.78 22.6059 294.855L144.315 365.121C146.242 366.234 148.231 367.194 150.264 368V259.288L109.604 235.459C108.648 235.027 107.681 234.456 106.728 233.775L106.46 233.617L106.464 233.583C102.29 230.5 98.4002 225.306 96.7309 220.117C95.4984 216.285 95.0691 212.595 96.1585 209.758C96.3722 209.201 96.6033 208.703 96.8492 208.259C99.5485 203.382 104.889 203.496 109.812 206.999L150.264 230.28V189.005C150.264 179.15 158.254 171.159 168.111 171.159C177.967 171.159 185.957 179.15 185.957 189.005V297.471L235.91 268.717C240.833 265.214 246.172 265.102 248.871 269.977C249.118 270.424 249.35 270.921 249.561 271.478C250.651 274.313 250.223 278.003 248.99 281.835C246.898 288.336 241.321 294.846 236.068 297.201L185.957 326.54V368C187.167 367.439 188.358 366.821 189.526 366.144L311.236 294.855C325.225 286.78 333.842 271.855 333.842 255.702V115.476C333.842 99.3245 325.225 84.3994 311.236 76.3234L189.526 6.05698ZM274.456 269.907C269.844 277.826 262.013 281.864 256.966 278.925C251.917 275.987 251.563 267.184 256.175 259.264C260.785 251.343 268.616 247.305 273.664 250.245C278.714 253.185 279.067 261.986 274.456 269.907Z" fill="#F0EFEB"/><path d="M440.672 267.636L484.484 100.363H539.248L583.06 267.636H550.677L541.629 230.836H482.103L473.055 267.636H440.672ZM489.484 201.683H534.248L514.009 120.197H509.723L489.484 201.683Z" fill="#F0EFEB"/><path d="M605.153 267.636V149.111H634.679V162.493H638.965C640.711 157.714 643.568 154.209 647.536 151.979C651.664 149.749 656.426 148.633 661.823 148.633H676.109V175.397H661.347C653.727 175.397 647.457 177.468 642.536 181.61C637.615 185.593 635.155 191.806 635.155 200.249V267.636H605.153Z" fill="#F0EFEB"/><path d="M725.513 267.636L687.892 149.111H719.798L747.18 245.652H751.466L778.848 149.111H810.755L773.134 267.636H725.513Z" fill="#F0EFEB"/><path d="M885.092 270.981C873.346 270.981 862.79 268.592 853.424 263.813C844.059 259.033 836.677 252.104 831.28 243.023C825.883 233.943 823.185 223.03 823.185 210.285V206.462C823.185 193.717 825.883 182.805 831.28 173.724C836.677 164.644 844.059 157.714 853.424 152.935C862.79 148.155 873.346 145.766 885.092 145.766C896.839 145.766 907.395 148.155 916.76 152.935C926.126 157.714 933.507 164.644 938.904 173.724C944.302 182.805 947 193.717 947 206.462V210.285C947 223.03 944.302 233.943 938.904 243.023C933.507 252.104 926.126 259.033 916.76 263.813C907.395 268.592 896.839 270.981 885.092 270.981ZM885.092 244.218C894.299 244.218 901.919 241.271 907.951 235.376C913.983 229.323 916.999 220.72 916.999 209.568V207.179C916.999 196.027 913.983 187.504 907.951 181.61C902.077 175.556 894.458 172.529 885.092 172.529C875.885 172.529 868.266 175.556 862.234 181.61C856.202 187.504 853.186 196.027 853.186 207.179V209.568C853.186 220.72 856.202 229.323 862.234 235.376C868.266 241.271 875.885 244.218 885.092 244.218Z" fill="#F0EFEB"/></svg>
+    </div>
+    <h1 style="position:relative;z-index:1;font-size:clamp(40px,5.4vw,70px);font-weight:700;color:#F0EFEB;line-height:1.02;letter-spacing:-0.035em;max-width:880px;margin:0 0 26px;">IA para integridade de<br /><em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#E5C8C5;font-weight:400;">pagamentos em saúde.</em></h1>
+    <p style="position:relative;z-index:1;font-size:clamp(16px,2.2vw,21px);font-weight:400;color:rgba(240,239,235,0.66);line-height:1.55;max-width:600px;margin:0 0 44px;">A IA da Arvo analisa 100% das contas médicas, identificando pagamentos indevidos com a precisão que a análise manual não alcança.</p>
+    <div style="position:relative;z-index:1;display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;">
+      <button type="button" onClick="{{ openModal }}" style="font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;color:#F0EFEB;background:#902B29;border:none;padding:15px 30px;border-radius:11px;cursor:pointer;letter-spacing:-0.01em;" onMouseEnter="{{ heroBtnIn }}" onMouseLeave="{{ heroBtnOut }}">Descobrir economia</button>
+      <a href="#como-funciona" style="font-size:15px;font-weight:500;color:rgba(240,239,235,0.72);background:rgba(240,239,235,0.06);border:1px solid rgba(240,239,235,0.14);padding:15px 30px;border-radius:11px;cursor:pointer;text-decoration:none;letter-spacing:-0.01em;">Como funciona →</a>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="resultados" style="background:#0D0D10;background-image:radial-gradient(ellipse 60% 70% at 0% 0%, rgba(144,43,41,0.34) 0%, transparent 58%), radial-gradient(ellipse 60% 70% at 100% 100%, rgba(144,43,41,0.34) 0%, transparent 58%);padding:90px 40px;">
+    <div style="max-width:1160px;margin:0 auto 44px;font-size:clamp(16px,1.6vw,20px);font-weight:500;color:#F0EFEB;letter-spacing:-0.01em;line-height:1.4;">O desperdício em saúde é sistêmico. E recuperável.</div>
+    <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+      <div style="padding:46px 38px;background:rgba(255,255,255,0.06);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(240,239,235,0.10);border-radius:20px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.08), 0 4px 24px rgba(0,0,0,0.25);">
+        <div style="font-size:clamp(36px,5vw,58px);font-weight:700;letter-spacing:-0.04em;color:#F0EFEB;line-height:1;margin-bottom:12px;">R$ <span style="color:#FF4A2E;">34bi</span></div>
+        <div style="font-size:15px;font-weight:500;color:#6B6B72;line-height:1.5;">perdidos por ano em erros, fraudes e abusos no setor</div>
+      </div>
+      <div style="padding:46px 38px;background:rgba(255,255,255,0.06);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(240,239,235,0.10);border-radius:20px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.08), 0 4px 24px rgba(0,0,0,0.25);">
+        <div style="font-size:clamp(36px,5vw,58px);font-weight:700;letter-spacing:-0.04em;color:#F0EFEB;line-height:1;margin-bottom:12px;">R$ <span style="color:#FF4A2E;">200bi</span></div>
+        <div style="font-size:15px;font-weight:500;color:#6B6B72;line-height:1.5;">de despesa assistencial processada</div>
+      </div>
+      <div style="padding:46px 38px;background:rgba(255,255,255,0.06);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(240,239,235,0.10);border-radius:20px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.08), 0 4px 24px rgba(0,0,0,0.25);">
+        <div style="font-size:clamp(36px,5vw,58px);font-weight:700;letter-spacing:-0.04em;color:#F0EFEB;line-height:1;margin-bottom:12px;"><span style="color:#FF4A2E;">+90%</span></div>
+        <div style="font-size:15px;font-weight:500;color:#6B6B72;line-height:1.5;">de precisão dos apontamentos gerados pelos Smart Agents</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS / PILARES -->
+  <section id="como-funciona" style="padding:100px 40px;background:#F0EFEB;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <div style="margin-bottom:64px;">
+        <span style="display:inline-block;font-size:14px;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:#902B29;margin-bottom:18px;">Diferenciais</span>
+        <h2 style="font-size:clamp(32px,4vw,50px);font-weight:700;letter-spacing:-0.03em;line-height:1.1;color:#0D0D10;max-width:680px;margin:0;">IA <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#902B29;font-weight:400;">construída</em> para precisão, eficiência e explicabilidade</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+        <div class="arvo-lift" style="background:#fff;border:1px solid rgba(13,13,16,0.07);border-radius:16px;padding:30px 26px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;color:#6B6B72;margin-bottom:18px;">01</div>
+          <div style="width:42px;height:42px;background:rgba(144,43,41,0.08);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:#902B29;fill:none;stroke-width:1.5;"><path d="M3 3h18v18H3zM9 9h6M9 12h6M9 15h4"/></svg></div>
+          <div style="font-size:17px;font-weight:600;letter-spacing:-0.02em;color:#0D0D10;margin-bottom:10px;line-height:1.2;">Análise exaustiva em escala</div>
+          <div style="font-size:14px;font-weight:400;line-height:1.6;color:#6B6B72;">Avalia 100% das contas médicas, cruzando dados, regras de negócio e exceções com profundidade inalcançável na análise manual.</div>
+        </div>
+        <div class="arvo-lift" style="background:#fff;border:1px solid rgba(13,13,16,0.07);border-radius:16px;padding:30px 26px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;color:#6B6B72;margin-bottom:18px;">02</div>
+          <div style="width:42px;height:42px;background:rgba(144,43,41,0.08);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:#902B29;fill:none;stroke-width:1.5;"><path d="M9 12l2 2 4-4M5 12a7 7 0 1014 0A7 7 0 005 12z"/></svg></div>
+          <div style="font-size:17px;font-weight:600;letter-spacing:-0.02em;color:#0D0D10;margin-bottom:10px;line-height:1.2;">Decisões padronizadas</div>
+          <div style="font-size:14px;font-weight:400;line-height:1.6;color:#6B6B72;">Identifica precedentes e compara casos similares, reduzindo variações e fortalecendo a segurança técnica da operação.</div>
+        </div>
+        <div class="arvo-lift" style="background:#fff;border:1px solid rgba(13,13,16,0.07);border-radius:16px;padding:30px 26px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;color:#6B6B72;margin-bottom:18px;">03</div>
+          <div style="width:42px;height:42px;background:rgba(144,43,41,0.08);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:#902B29;fill:none;stroke-width:1.5;"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <div style="font-size:17px;font-weight:600;letter-spacing:-0.02em;color:#0D0D10;margin-bottom:10px;line-height:1.2;">Detecção de padrões</div>
+          <div style="font-size:14px;font-weight:400;line-height:1.6;color:#6B6B72;">Mapeia comportamentos atípicos e correlações inesperadas que indicam risco, agindo antes que a perda aconteça.</div>
+        </div>
+        <div class="arvo-lift" style="background:#fff;border:1px solid rgba(13,13,16,0.07);border-radius:16px;padding:30px 26px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;color:#6B6B72;margin-bottom:18px;">04</div>
+          <div style="width:42px;height:42px;background:rgba(144,43,41,0.08);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:#902B29;fill:none;stroke-width:1.5;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div style="font-size:17px;font-weight:600;letter-spacing:-0.02em;color:#0D0D10;margin-bottom:10px;line-height:1.2;">Conformidade contratual e regulatória</div>
+          <div style="font-size:14px;font-weight:400;line-height:1.6;color:#6B6B72;">Aplica automaticamente as regras específicas de cada operadora e rede, garantindo aderência e precisão técnica.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENTS -->
+  <section id="agentes" style="background:#0D0D10;background-image:radial-gradient(ellipse 60% 70% at 100% 0%, rgba(144,43,41,0.32) 0%, transparent 58%), radial-gradient(ellipse 60% 70% at 0% 100%, rgba(144,43,41,0.32) 0%, transparent 58%);padding:100px 40px;">
+    <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+      <div>
+        <span style="display:inline-block;font-size:14px;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:#902B29;margin-bottom:18px;">Smart Agents da Arvo</span>
+        <h2 style="font-size:clamp(32px,4vw,50px);font-weight:700;letter-spacing:-0.03em;line-height:1.1;color:#F0EFEB;margin:0;">Muito além de<br /><em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#E5C8C5;font-weight:400;">regras prontas.</em></h2>
+        <p style="font-size:17px;line-height:1.65;color:#6B6B72;max-width:520px;margin:20px 0 0;">+70 Smart Agents especializados, cada um focado em um tipo de irregularidade.</p>
+        <ul style="list-style:none;margin:24px 0 0;padding:0;display:flex;flex-direction:column;gap:12px;">
+          <li style="font-size:15px;color:#9A9AA0;line-height:1.55;padding-left:22px;position:relative;"><span style="position:absolute;left:0;color:#902B29;font-weight:700;">—</span>Enxergam o comportamento por trás da cobrança, não a guia isolada</li>
+          <li style="font-size:15px;color:#9A9AA0;line-height:1.55;padding-left:22px;position:relative;"><span style="position:absolute;left:0;color:#902B29;font-weight:700;">—</span>Analisam o histórico completo do paciente, não evento a evento</li>
+          <li style="font-size:15px;color:#9A9AA0;line-height:1.55;padding-left:22px;position:relative;"><span style="position:absolute;left:0;color:#902B29;font-weight:700;">—</span>Aprendem com cada desfecho, se tornando mais precisos a cada análise</li>
+        </ul>
+      </div>
+      <div style="background:#1C1C22;border:1px solid rgba(240,239,235,0.07);border-radius:20px;overflow:hidden;">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid rgba(240,239,235,0.06);background:rgba(13,13,16,0.5);">
+          <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B6B72;">Agentes · Rodando agora</span>
+          <div style="display:flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:0.1em;color:#FF4A2E;border:1px solid rgba(255,74,46,0.3);background:rgba(255,74,46,0.1);padding:3px 9px;border-radius:100px;"><span style="width:5px;height:5px;border-radius:50%;background:#FF4A2E;animation:arvoPulse 1.5s ease-in-out infinite;"></span>LIVE</div>
+        </div>
+        <div style="padding:20px;display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:rgba(255,74,46,0.04);border:1px solid rgba(255,74,46,0.3);border-radius:10px;position:relative;overflow:hidden;">
+            <div style="width:8px;height:8px;border-radius:50%;background:#FF4A2E;flex-shrink:0;animation:arvoPulse 1s infinite;"></div>
+            <div style="flex:1;"><div style="font-size:13px;font-weight:600;color:#F0EFEB;">Agente Pertinência de Materiais</div><div style="font-size:11px;color:#6B6B72;margin-top:2px;">Verificando comportamento histórico · 1.284 contas</div></div>
+            <div style="position:absolute;bottom:0;left:0;height:2px;background:linear-gradient(90deg,#902B29,#FF4A2E);border-radius:0 2px 2px 0;animation:arvoProgress 3s ease-in-out infinite;animation-delay:0s;"></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:rgba(144,43,41,0.06);border:1px solid rgba(144,43,41,0.4);border-radius:10px;position:relative;overflow:hidden;">
+            <div style="width:8px;height:8px;border-radius:50%;background:#902B29;flex-shrink:0;animation:arvoPulse 1.5s infinite;"></div>
+            <div style="flex:1;"><div style="font-size:13px;font-weight:600;color:#F0EFEB;">Agente Quantidade excessiva de SADT</div><div style="font-size:11px;color:#6B6B72;margin-top:2px;">Cruzando cobrança em quantidade superior ao pertinente</div></div>
+            <div style="position:absolute;bottom:0;left:0;height:2px;background:linear-gradient(90deg,#902B29,#FF4A2E);border-radius:0 2px 2px 0;animation:arvoProgress 3s ease-in-out infinite;animation-delay:0.8s;"></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:rgba(255,74,46,0.04);border:1px solid rgba(255,74,46,0.3);border-radius:10px;position:relative;overflow:hidden;">
+            <div style="width:8px;height:8px;border-radius:50%;background:#FF4A2E;flex-shrink:0;animation:arvoPulse 1s infinite;"></div>
+            <div style="flex:1;"><div style="font-size:13px;font-weight:600;color:#F0EFEB;">Agente Conformidade taxa de sala</div><div style="font-size:11px;color:#6B6B72;margin-top:2px;">Detectando cobranças incompatíveis com porte anestésico</div></div>
+            <div style="position:absolute;bottom:0;left:0;height:2px;background:linear-gradient(90deg,#902B29,#FF4A2E);border-radius:0 2px 2px 0;animation:arvoProgress 3s ease-in-out infinite;animation-delay:1.6s;"></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:rgba(144,43,41,0.06);border:1px solid rgba(144,43,41,0.4);border-radius:10px;position:relative;overflow:hidden;">
+            <div style="width:8px;height:8px;border-radius:50%;background:#902B29;flex-shrink:0;animation:arvoPulse 1.5s infinite;"></div>
+            <div style="flex:1;"><div style="font-size:13px;font-weight:600;color:#F0EFEB;">Agente Código-descrição divergente</div><div style="font-size:11px;color:#6B6B72;margin-top:2px;">Mapeando divergências entre evento realizado vs código utilizado</div></div>
+            <div style="position:absolute;bottom:0;left:0;height:2px;background:linear-gradient(90deg,#902B29,#FF4A2E);border-radius:0 2px 2px 0;animation:arvoProgress 3s ease-in-out infinite;animation-delay:1.2s;"></div>
+          </div>
+        </div>
+        <div style="padding:14px 20px;border-top:1px solid rgba(240,239,235,0.06);display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:11px;color:#6B6B72;font-weight:500;">Total evitado hoje</span>
+          <span style="font-size:13px;font-weight:700;color:#3FBF7F;">R$ 847.320</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTEGRAÇÃO -->
+  <section style="padding:100px 40px;background:#F0EFEB;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <div style="margin-bottom:64px;">
+        <span style="display:inline-block;font-size:14px;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:#902B29;margin-bottom:18px;">Integração</span>
+        <h2 style="font-size:clamp(32px,4vw,50px);font-weight:700;letter-spacing:-0.03em;line-height:1.1;color:#0D0D10;margin:0;">Resultados em <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#902B29;font-weight:400;">semanas,</em><br />sem trocar de <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#902B29;font-weight:400;">sistema.</em></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:48px;">
+        <div>
+          <div style="width:44px;height:44px;border-radius:50%;background:#902B29;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#F0EFEB;margin-bottom:26px;">01</div>
+          <div style="font-size:19px;font-weight:600;color:#0D0D10;letter-spacing:-0.02em;line-height:1.2;margin-bottom:12px;">Integração plug &amp; play</div>
+          <div style="font-size:15px;color:#6B6B72;line-height:1.65;">Conexão direta ao ERP da operadora, com suporte dedicado ao cliente.</div>
+        </div>
+        <div>
+          <div style="width:44px;height:44px;border-radius:50%;background:#902B29;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#F0EFEB;margin-bottom:26px;">02</div>
+          <div style="font-size:19px;font-weight:600;color:#0D0D10;letter-spacing:-0.02em;line-height:1.2;margin-bottom:12px;">Imersão na operação</div>
+          <div style="font-size:15px;color:#6B6B72;line-height:1.65;">Os Smart Agents são calibrados às regras, contratos e particularidades da sua operação.</div>
+        </div>
+        <div>
+          <div style="width:44px;height:44px;border-radius:50%;background:#902B29;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#F0EFEB;margin-bottom:26px;">03</div>
+          <div style="font-size:19px;font-weight:600;color:#0D0D10;letter-spacing:-0.02em;line-height:1.2;margin-bottom:12px;">Economia em semanas</div>
+          <div style="font-size:15px;color:#6B6B72;line-height:1.65;">Identifica pagamentos indevidos em escala, gerando economia nas primeiras semanas.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section style="padding:100px 40px;background:#0D0D10;background-image:radial-gradient(ellipse 60% 70% at 0% 0%, rgba(144,43,41,0.32) 0%, transparent 58%), radial-gradient(ellipse 60% 70% at 100% 100%, rgba(144,43,41,0.32) 0%, transparent 58%);">
+    <div style="max-width:1160px;margin:0 auto;">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:48px;flex-wrap:wrap;">
+        <div>
+          <span style="display:inline-block;font-size:14px;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:#902B29;margin-bottom:18px;">A opinião de quem usa</span>
+          <h2 style="font-size:clamp(32px,4vw,50px);font-weight:700;letter-spacing:-0.03em;line-height:1.1;color:#F0EFEB;margin:0;">O que dizem as <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#E5C8C5;font-weight:400;">lideranças</em><br />do setor.</h2>
+        </div>
+        <div style="display:flex;gap:10px;">
+          <button type="button" onClick="{{ prev }}" aria-label="Anterior" style="width:48px;height:48px;border-radius:50%;border:1px solid rgba(240,239,235,0.18);background:rgba(240,239,235,0.05);color:#F0EFEB;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;">←</button>
+          <button type="button" onClick="{{ next }}" aria-label="Próximo" style="width:48px;height:48px;border-radius:50%;border:1px solid rgba(240,239,235,0.18);background:rgba(240,239,235,0.05);color:#F0EFEB;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;">→</button>
+        </div>
+      </div>
+      <div ref="{{ wrapRef }}" style="overflow:hidden;-webkit-mask-image:linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);mask-image:linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);">
+        <div style="{{ trackStyle }}">
+          <sc-for list="{{ slides }}" as="t" hint-placeholder-count="3">
+            <div style="{{ slideStyle }}">
+              <div style="background:rgba(255,255,255,0.05);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(240,239,235,0.10);border-radius:24px;padding:clamp(26px,3vw,40px);display:flex;flex-direction:column;gap:26px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.08), 0 4px 24px rgba(0,0,0,0.25);min-height:250px;">
+                <p style="font-size:clamp(17px,1.6vw,21px);line-height:1.55;color:#F0EFEB;font-weight:400;letter-spacing:-0.01em;margin:0;">{{ t.quote }}</p>
+                <div style="display:flex;align-items:center;gap:18px;margin-top:auto;flex-wrap:wrap;">
+                  <div style="width:62px;height:62px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid rgba(144,43,41,0.4);"><img src="{{ t.img }}" alt="{{ t.name }}" style="width:100%;height:100%;object-fit:cover;object-position:center top;" /></div>
+                  <div style="flex:1;min-width:150px;">
+                    <div style="font-size:19px;font-weight:700;color:#F0EFEB;letter-spacing:-0.01em;">{{ t.name }}</div>
+                    <div style="font-size:14px;color:#9A9AA0;margin-top:4px;line-height:1.4;">{{ t.role }}</div>
+                  </div>
+                  <div style="font-size:14px;font-weight:700;letter-spacing:0.02em;color:#E5C8C5;background:rgba(144,43,41,0.2);border:1px solid rgba(144,43,41,0.45);padding:10px 18px;border-radius:11px;white-space:nowrap;">{{ t.company }}</div>
+                </div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;justify-content:center;margin-top:30px;">
+        <sc-for list="{{ dots }}" as="d" hint-placeholder-count="8">
+          <button type="button" onClick="{{ d.onClick }}" aria-label="Ir para depoimento" style="{{ d.style }}"></button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTATO -->
+  <section id="contato" style="padding:100px 40px;background:#F0EFEB;">
+    <div class="home-cta-card" style="max-width:1160px;margin:0 auto;background:#0D0D10;border-radius:24px;padding:64px 60px;display:grid;grid-template-columns:1fr auto;align-items:stretch;gap:56px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;width:55%;height:100%;background:radial-gradient(ellipse 90% 100% at 0% 50%, rgba(144,43,41,0.62) 0%, rgba(144,43,41,0.2) 45%, transparent 80%);pointer-events:none;"></div>
+      <div style="position:relative;z-index:1;">
+        <h2 style="font-size:clamp(28px,3.5vw,44px);font-weight:700;letter-spacing:-0.03em;color:#F0EFEB;line-height:1.1;margin:0;">Descubra onde estão os<br /><em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#E5C8C5;font-weight:400;">desperdícios</em> da sua operação.</h2>
+        <p style="font-size:18px;color:#9A9AA0;margin:16px 0 0;max-width:460px;line-height:1.6;">Fale com um de nossos especialistas.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px;align-items:stretch;justify-content:space-between;position:relative;z-index:1;flex-shrink:0;align-self:stretch;">
+        <button type="button" onClick="{{ openModal }}" style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;color:#F0EFEB;background:#902B29;border:none;padding:22px 48px;border-radius:13px;cursor:pointer;white-space:nowrap;" onMouseEnter="{{ heroBtnIn }}" onMouseLeave="{{ heroBtnOut }}">Descobrir economia</button>
+        <span style="font-size:14px;color:#9A9AA0;text-align:center;">Sem compromisso · Resposta em até 24h</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL POV (HubSpot) -->
+  <div onClick="{{ closeModal }}" style="{{ modalStyle }}">
+    <div onClick="{{ stopProp }}" style="background:#15151A;border:1px solid rgba(240,239,235,0.12);border-radius:18px;padding:36px 32px 30px;max-width:520px;width:100%;max-height:88vh;overflow-y:auto;position:relative;box-shadow:0 40px 100px rgba(0,0,0,0.6);">
+      <button type="button" onClick="{{ closeModal }}" aria-label="Fechar" style="position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:9px;border:1px solid rgba(240,239,235,0.14);background:rgba(240,239,235,0.06);color:#F0EFEB;font-size:17px;cursor:pointer;line-height:1;">✕</button>
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#FF4A2E;margin-bottom:6px;">Descubra a economia potencial</div>
+      <div style="font-size:22px;font-weight:700;color:#F0EFEB;letter-spacing:-0.02em;margin-bottom:22px;">Fale com um especialista</div>
+      <div id="hs-form-container"></div>
+    </div>
+  </div>
+
+  <dc-import name="Footer" hint-size="100%,440px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { modalOpen: false, idx: 0, vw: 0 };
+  slides = [
+    { name: "Anderson Ferreira", role: "Diretor Presidente", company: "Cemig", img: "https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/69a9d73195df97c517d49970_anderson%20ferreira.png", quote: "Com o apoio da tecnologia da Arvo, a Cemig tem colhido resultados relevantes com aumento expressivo no custo evitado com desperd\u00edcios, e alcan\u00e7ando o primeiro n\u00edvel de economia em apenas 15 dias. Isso nos permite investir mais em assist\u00eancia e no melhor cuidado com o benefici\u00e1rio." },
+    { name: "Regina Mello", role: "Gerente Executiva de Sa\u00fade", company: "Vivest", img: "https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/68e43e20af43834559c69a7a_Regina.png", quote: "Com a IA da Arvo, identificamos melhorias em processos, ajustes operacionais e auditorias que precisavam ser retreinadas. O resultado foi muito al\u00e9m do apontamento de glosas: as intelig\u00eancias da Arvo se conectam a outros processos e sistemas, tornando a jornada de auditoria muito mais eficiente." },
+    { name: "Paulo Jorge Cardoso", role: "Diretor T\u00e9cnico", company: "Athena Sa\u00fade", img: "https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/68e43e201b959a671f882aef_PJ.png", quote: "A grande diferen\u00e7a da Arvo est\u00e1 no resultado que entrega: al\u00e9m de analisar o ciclo de faturamento e ampliar o n\u00famero de glosas, o que se destaca \u00e9 a capacidade de sustent\u00e1-las com justificativas t\u00e9cnicas consistentes." },
+    { name: "Frederico Cruz", role: "Gerente de Opera\u00e7\u00f5es", company: "Sa\u00fade Petrobras", img: "https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/66d5f3348209757fc1e5f307_frederico-cruz.avif", quote: "O processo da Arvo, que inclui as ferramentas de Intelig\u00eancia Artificial, a an\u00e1lise t\u00e9cnica dos desvios encontrados e uma opera\u00e7\u00e3o presente, tem nos ajudado no combate \u00e0 fraude, m\u00e1 utiliza\u00e7\u00e3o e desperd\u00edcios. N\u00e3o d\u00e1 pra pensar em sustentabilidade e an\u00e1lise de um grande volume de dados sem utilizar este tipo de ferramenta!" },
+    { name: "Luis Fernando Rolim", role: "Diretor Executivo de Provimentos em Sa\u00fade", company: "Central Nacional Unimed", img: "https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/68e43f28fec1726d4adfa693_Rolim.png", quote: "O uso de IA nas opera\u00e7\u00f5es de sa\u00fade j\u00e1 \u00e9 uma necessidade, especialmente em empresas de grande porte. Integrar novas tecnologias em neg\u00f3cios com legados \u00e9 desafiador, mas a experi\u00eancia com a Arvo foi muito prazerosa no sentido da qualifica\u00e7\u00e3o da equipe, acelerando os resultados." },
+    { name: "Werner Dalla", role: "Diretor Presidente Interino", company: "Abertta Sa\u00fade", img: "https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/6823b91503876e5fb426ed65_werner.avif", quote: "A Arvo tem sido um parceiro com ganhos efetivos desde o in\u00edcio da parceria. Com processos \u00e1geis, proximidade e acompanhamento sistem\u00e1tico da implanta\u00e7\u00e3o, tem impactado positivamente nosso processo de an\u00e1lise de contas m\u00e9dicas." },
+    { name: "Jo\u00e3o Alceu Lima", role: "Investidor e Conselheiro (ex-Presidente)", company: "SulAm\u00e9rica \u00b7 Qualicorp", img: "https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/68e43e20f02655d877fe1e8d_Alceu.png", quote: "A IA da Arvo traz seguran\u00e7a, previsibilidade e intelig\u00eancia \u00e0 auditoria, tornando as equipes mais eficientes e produtivas. Isso gera economias diretas no bottom line das operadoras. Em um mercado competitivo, usar IA deixou de ser opcional: \u00e9 essencial para se manter relevante." },
+    { name: "Jo\u00e3o Paulo Braga", role: "Vice-presidente", company: "Athena Sa\u00fade", img: "https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/66d79bd092e84aac43c7ac14_joao-paulo-braga.avif", quote: "A parceria com a Arvo permitiu \u00e0 Athena Sa\u00fade implantar e desenvolver agentes digitais inteligentes que analisam e criticam contas m\u00e9dicas em grande escala, em tempo real. A solu\u00e7\u00e3o nos permite evitar desperd\u00edcios e identificar rapidamente tend\u00eancias de risco, algo que pessoas s\u00e3o incapazes de fazer." },
+  ];
+  goTo(i) { const n = this.slides.length; this.setState({ idx: ((i % n) + n) % n }); }
+  ensureForm() {
+    const create = () => {
+      if (window.hbspt && document.getElementById('hs-form-container')) {
+        if (this._hsMade) return;
+        this._hsMade = true;
+        const darkCss = 'body,.hs-form{font-family:"Space Grotesk",Arial,sans-serif;color:#F0EFEB;}'
+          + '.hs-form-field{margin-bottom:14px;}'
+          + '.hs-form-field>label{display:block;margin-bottom:6px;font-size:13px;font-weight:600;color:#F0EFEB;}'
+          + '.hs-form-field input,.hs-form-field select,.hs-form-field textarea,.hs-input{width:100%;box-sizing:border-box;font-size:14px;padding:11px 13px;border:1px solid rgba(240,239,235,0.18);border-radius:9px;background:#1F1F26;color:#F0EFEB;}'
+          + '.hs-input::placeholder{color:rgba(240,239,235,0.4);}'
+          + '.hs-button{width:100%;margin-top:8px;font-size:15px;font-weight:600;color:#F0EFEB;background:#902B29;border:none;border-radius:11px;padding:14px 26px;cursor:pointer;}'
+          + '.hs-button:hover{background:#a83230;}'
+          + '.hs-error-msg,.hs-error-msgs label{color:#FF6B5E;font-size:12px;}'
+          + '.legal-consent-container,.hs-richtext,.hs-richtext p,.hs-form-required{color:rgba(240,239,235,0.6);font-size:12px;}'
+          + '.legal-consent-container a,a{color:#FF6B5E;}';
+        window.hbspt.forms.create({ portalId: "40201694", formId: "7e779449-1a18-48da-9f38-a5938cff0b9f", region: "na1", target: "#hs-form-container", css: darkCss });
+      } else {
+        this._hsTimer = setTimeout(create, 150);
+      }
+    };
+    create();
+  }
+  openModalFn() {
+    this.setState({ modalOpen: true });
+    setTimeout(() => this.ensureForm(), 0);
+  }
+  componentDidMount() {
+    if (location.hash === '#contato' || location.hash === '#forms') this.openModalFn();
+    this._onHash = () => { if (location.hash === '#contato' || location.hash === '#forms') this.openModalFn(); };
+    window.addEventListener('hashchange', this._onHash);
+    this._auto = setInterval(() => this.goTo(this.state.idx + 1), 7000);
+    this.measure();
+    this._onResize = () => this.measure();
+    window.addEventListener('resize', this._onResize);
+  }
+  measure() { if (this._wrap) { const w = this._wrap.clientWidth; if (w && w !== this.state.vw) this.setState({ vw: w }); } }
+  componentWillUnmount() { clearTimeout(this._hsTimer); clearInterval(this._auto); window.removeEventListener('hashchange', this._onHash); window.removeEventListener('resize', this._onResize); }
+  renderVals() {
+    const g = 24;
+    const W = this.state.vw || (typeof window !== 'undefined' ? Math.min(window.innerWidth - 80, 1160) : 1120);
+    const sw = Math.max(240, Math.min(1000, Math.round(W * 0.84)));
+    const n = this.slides.length;
+    const trackW = n * sw + (n - 1) * g;
+    const ideal = W / 2 - (this.state.idx * (sw + g) + sw / 2);
+    const minT = Math.min(0, W - trackW);
+    const tx = Math.max(minT, Math.min(0, ideal));
+    return {
+      wrapRef: (el) => { this._wrap = el; if (el && !this.state.vw) requestAnimationFrame(() => this.measure()); },
+      slideStyle: 'flex:0 0 ' + sw + 'px;box-sizing:border-box;',
+      heroBtnIn: (e) => { e.currentTarget.style.background = '#a83230'; },
+      heroBtnOut: (e) => { e.currentTarget.style.background = '#902B29'; },
+      openModal: () => this.openModalFn(),
+      closeModal: () => this.setState({ modalOpen: false }),
+      stopProp: (e) => e.stopPropagation(),
+      modalStyle: 'position:fixed;inset:0;z-index:2000;background:rgba(13,13,16,0.6);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:24px;' + (this.state.modalOpen ? 'display:flex;' : 'display:none;'),
+      slides: this.slides,
+      trackStyle: 'display:flex;gap:' + g + 'px;transition:transform 0.55s cubic-bezier(0.4,0,0.2,1);transform:translateX(' + tx + 'px);will-change:transform;',
+      prev: () => this.goTo(this.state.idx - 1),
+      next: () => this.goTo(this.state.idx + 1),
+      dots: this.slides.map((_, i) => ({
+        onClick: () => this.goTo(i),
+        style: 'height:8px;border-radius:100px;border:none;cursor:pointer;padding:0;transition:all 0.3s;width:' + (i === this.state.idx ? '26px' : '8px') + ';background:' + (i === this.state.idx ? '#FF4A2E' : 'rgba(240,239,235,0.25)') + ';',
+      })),
+    };
+  }
+}
+</script>
+</body>
+</html>

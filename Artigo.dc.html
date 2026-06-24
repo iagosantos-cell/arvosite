@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="responsive.css" />
+  <script src="artigos-data.js"></script>
+  <style>
+    body { margin:0; background:#F0EFEB; -webkit-font-smoothing:antialiased; }
+    .artbody{font-family:'Space Grotesk',system-ui,sans-serif;color:#2A2A30;font-size:17px;line-height:1.78;}
+    .artbody p{margin:0 0 20px;}
+    .artbody h2{font-size:clamp(22px,2.4vw,28px);font-weight:700;color:#0D0D10;letter-spacing:-0.02em;margin:40px 0 14px;line-height:1.2;}
+    .artbody ul,.artbody ol{margin:0 0 20px;padding-left:22px;}
+    .artbody li{margin-bottom:10px;}
+    .artbody strong{color:#0D0D10;font-weight:700;}
+    .artbody em{font-style:italic;}
+    .artbody blockquote{margin:26px 0;padding:18px 24px;border-left:3px solid #902B29;background:rgba(144,43,41,0.05);font-style:italic;color:#3A3A40;border-radius:0 12px 12px 0;font-size:16px;}
+    .artbody table{width:100%;border-collapse:collapse;margin:8px 0 26px;font-size:15px;}
+    .artbody th,.artbody td{border:1px solid rgba(13,13,16,0.12);padding:11px 15px;text-align:left;vertical-align:top;}
+    .artbody th{background:rgba(144,43,41,0.08);font-weight:700;color:#0D0D10;}
+    .artbody a{color:#902B29;font-weight:600;text-decoration:underline;}
+  </style>
+</helmet>
+
+<div style="font-family:'Space Grotesk',system-ui,sans-serif;background:#F0EFEB;color:#0D0D10;overflow-x:hidden;">
+  <dc-import name="Nav" active="conteudos" hint-size="100%,68px"></dc-import>
+
+  <!-- HEADER -->
+  <section style="background:#0D0D10;background-image:radial-gradient(ellipse 115% 92% at 50% 0%, rgba(144,43,41,0.6) 0%, rgba(144,43,41,0.14) 42%, transparent 80%);padding:150px 40px 64px;">
+    <div style="max-width:760px;margin:0 auto;">
+      <a href="MateriaisRicos.dc.html" style="font-size:13px;font-weight:600;color:rgba(240,239,235,0.55);text-decoration:none;display:inline-block;margin-bottom:28px;">← Voltar para Materiais Ricos</a>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+        <span style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#FF4A2E;">{{ category }}</span>
+        <span style="font-size:13px;color:rgba(240,239,235,0.5);">· {{ date }}</span>
+      </div>
+      <h1 style="font-size:clamp(30px,4vw,46px);font-weight:700;letter-spacing:-0.03em;line-height:1.1;color:#F0EFEB;margin:0;">{{ title }}</h1>
+      <sc-if value="{{ hasSub }}" hint-placeholder-val="{{ true }}">
+        <p style="font-size:clamp(16px,1.8vw,19px);font-weight:400;color:rgba(240,239,235,0.62);line-height:1.55;margin:20px 0 0;">{{ subtitle }}</p>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- COVER -->
+  <sc-if value="{{ hasCover }}" hint-placeholder-val="{{ true }}">
+    <div style="max-width:1000px;margin:-40px auto 0;padding:0 40px;position:relative;z-index:2;">
+      <img src="{{ coverUrl }}" alt="" style="width:100%;height:clamp(220px,34vw,420px);object-fit:cover;border-radius:20px;border:1px solid rgba(13,13,16,0.1);box-shadow:0 30px 80px rgba(13,13,16,0.25);display:block;" />
+    </div>
+  </sc-if>
+
+  <!-- BODY -->
+  <section style="background:#F0EFEB;padding:56px 40px 40px;">
+    <div style="max-width:760px;margin:0 auto;">{{ body }}</div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:#F0EFEB;padding:20px 40px 100px;">
+    <div style="max-width:760px;margin:0 auto;background:#0D0D10;border-radius:20px;padding:44px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;width:55%;height:100%;background:radial-gradient(ellipse 90% 100% at 0% 50%, rgba(144,43,41,0.62) 0%, rgba(144,43,41,0.2) 45%, transparent 80%);pointer-events:none;"></div>
+      <div style="position:relative;z-index:1;"><div style="font-size:22px;font-weight:700;color:#F0EFEB;letter-spacing:-0.02em;line-height:1.2;">Quer ver isso na sua operação?</div><div style="font-size:14px;color:#6B6B72;margin-top:6px;">Fale com um de nossos especialistas.</div></div>
+      <a href="Home.dc.html#contato" style="position:relative;z-index:1;font-size:14px;font-weight:600;color:#F0EFEB;background:#902B29;padding:14px 26px;border-radius:11px;text-decoration:none;white-space:nowrap;">Falar com a Arvo</a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,440px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  getArt() {
+    let slug = '';
+    try { slug = new URLSearchParams(location.search).get('a') || ''; } catch (e) {}
+    const data = window.ARVO_ARTIGOS || {};
+    return data[slug] || null;
+  }
+  renderVals() {
+    const a = this.getArt();
+    if (!a) {
+      return {
+        category: 'Artigo', date: '', title: 'Selecione um artigo',
+        hasSub: true, subtitle: 'Volte para a página de Artigos e escolha um conteúdo.',
+        hasCover: false, coverUrl: '',
+        body: React.createElement('p', { style: { color: '#6B6B72', fontFamily: 'Space Grotesk, sans-serif', fontSize: '16px' } }, 'Conteúdo não encontrado.')
+      };
+    }
+    return {
+      category: a.category || 'Artigo',
+      date: a.date || '',
+      title: a.title,
+      hasSub: !!a.subtitle,
+      subtitle: a.subtitle || '',
+      hasCover: !!a.cover,
+      coverUrl: a.cover || '',
+      body: React.createElement('div', { className: 'artbody', dangerouslySetInnerHTML: { __html: a.bodyHtml || '' } })
+    };
+  }
+}
+</script>
+</body>
+</html>

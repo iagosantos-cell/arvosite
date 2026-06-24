@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="responsive.css" />
+  <style>body { margin:0; background:#F0EFEB; -webkit-font-smoothing:antialiased; }</style>
+</helmet>
+
+<div style="font-family:'Space Grotesk',system-ui,sans-serif;background:#F0EFEB;color:#0D0D10;overflow-x:hidden;">
+  <dc-import name="Nav" active="conteudos" hint-size="100%,68px"></dc-import>
+
+  <!-- ARTICLE HEADER -->
+  <section style="background:#0D0D10;background-image:radial-gradient(ellipse 115% 92% at 50% 0%, rgba(144,43,41,0.82) 0%, rgba(144,43,41,0.34) 45%, transparent 85%);padding:150px 40px 72px;">
+    <div style="max-width:760px;margin:0 auto;">
+      <a href="Artigos.dc.html" style="font-size:13px;font-weight:600;color:rgba(240,239,235,0.55);text-decoration:none;display:inline-block;margin-bottom:28px;">← Voltar para Artigos</a>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px;"><span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FF4A2E;">Integridade de Pagamentos</span><span style="font-size:13px;color:#6B6B72;">· 6 min de leitura</span></div>
+      <h1 style="font-size:clamp(30px,4vw,52px);font-weight:700;letter-spacing:-0.035em;line-height:1.1;color:#F0EFEB;margin:0 0 28px;">Por que a análise por amostragem não dá mais conta da <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#E5C8C5;font-weight:400;">saúde suplementar</em></h1>
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div style="width:44px;height:44px;border-radius:50%;background:#902B29;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#F0EFEB;">A</div>
+        <div><div style="font-size:14px;font-weight:600;color:#F0EFEB;">Equipe Arvo</div><div style="font-size:12px;color:#6B6B72;">Publicado em junho de 2026</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COVER -->
+  <div style="max-width:1000px;margin:-40px auto 0;padding:0 40px;position:relative;z-index:2;">
+    <div style="height:clamp(220px,34vw,420px);border-radius:20px;background:#0D0D10 url('https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/683a17fd07cf58e12044b9c2_Frame%201410103627.avif') center/cover no-repeat;border:1px solid rgba(13,13,16,0.1);box-shadow:0 30px 80px rgba(13,13,16,0.25);"></div>
+  </div>
+
+  <!-- BODY -->
+  <article style="max-width:720px;margin:0 auto;padding:64px 40px 40px;">
+    <p style="font-size:20px;line-height:1.6;color:#0D0D10;font-weight:500;margin:0 0 32px;letter-spacing:-0.01em;">Durante décadas, a auditoria de contas médicas operou sob uma premissa silenciosa: é impossível olhar tudo, então olhamos uma amostra. Essa premissa não é mais verdadeira — e mantê-la custa caro.</p>
+
+    <p style="font-size:17px;line-height:1.75;color:#3A3A40;margin:0 0 24px;">O volume de contas que circula numa operadora de médio porte é incompatível com a capacidade de qualquer equipe humana. Revisar manualmente 5% a 10% das contas significa, na prática, aceitar que a imensa maioria dos pagamentos seja feita sem qualquer escrutínio técnico. O risco não revisado não desaparece: ele se acumula.</p>
+
+    <h2 style="font-size:26px;font-weight:700;letter-spacing:-0.02em;color:#0D0D10;margin:44px 0 16px;line-height:1.2;">O problema não é a amostra. É o que ela esconde.</h2>
+    <p style="font-size:17px;line-height:1.75;color:#3A3A40;margin:0 0 24px;">A amostragem assume que o que não foi visto se comporta como o que foi. Mas fraudes, erros e abusos raramente se distribuem de forma homogênea — eles se concentram em padrões específicos, prestadores específicos e janelas de tempo específicas. É exatamente o que uma amostra aleatória tende a perder.</p>
+
+    <blockquote style="margin:36px 0;padding:28px 32px;background:rgba(144,43,41,0.06);border-left:3px solid #902B29;border-radius:0 14px 14px 0;">
+      <p style="font-size:21px;line-height:1.45;font-weight:500;color:#0D0D10;letter-spacing:-0.01em;margin:0;font-style:italic;font-family:'Playfair Display',Georgia,serif;">"Revisar 5% das contas deixa 95% do risco passar — e o risco não revisado não desaparece, ele se acumula."</p>
+    </blockquote>
+
+    <h2 style="font-size:26px;font-weight:700;letter-spacing:-0.02em;color:#0D0D10;margin:44px 0 16px;line-height:1.2;">Análise de 100% deixou de ser luxo</h2>
+    <p style="font-size:17px;line-height:1.75;color:#3A3A40;margin:0 0 24px;">Com inteligência artificial, analisar a totalidade das contas tornou-se viável — e, mais do que isso, esperado. A diferença não está apenas no volume, mas na profundidade: cada conta é avaliada contra o comportamento histórico do paciente, as regras contratuais da operadora e a regulação vigente.</p>
+    <ul style="margin:0 0 24px;padding-left:22px;display:flex;flex-direction:column;gap:12px;">
+      <li style="font-size:17px;line-height:1.7;color:#3A3A40;"><strong style="color:#0D0D10;">Pertinência técnica</strong> — comportamento histórico indica custos que não pertencem àquela conta.</li>
+      <li style="font-size:17px;line-height:1.7;color:#3A3A40;"><strong style="color:#0D0D10;">Conformidade regulatória</strong> — cada conta é cruzada com contrato, regulamento e legislação.</li>
+      <li style="font-size:17px;line-height:1.7;color:#3A3A40;"><strong style="color:#0D0D10;">Custo-efetividade</strong> — itens fora de tabela são comparados ao preço praticado no mercado.</li>
+    </ul>
+
+    <h2 style="font-size:26px;font-weight:700;letter-spacing:-0.02em;color:#0D0D10;margin:44px 0 16px;line-height:1.2;">Evidência, não opinião</h2>
+    <p style="font-size:17px;line-height:1.75;color:#3A3A40;margin:0 0 24px;">A maior mudança não é o número de glosas, mas a forma como elas se sustentam. Quando cada crítica chega acompanhada de evidência técnica, a equipe deixa de discutir se algo é glosa e passa a agir com o argumento na mão. O retrabalho cai, a relação com o prestador fica menos atritada e a decisão fica defensável.</p>
+    <p style="font-size:17px;line-height:1.75;color:#3A3A40;margin:0 0 24px;">É essa a tese da integridade de pagamentos: transformar ruído em decisão. Não se trata de olhar mais contas pelo prazer do volume, mas de garantir que cada real gasto gere acesso e cuidado — não desperdício.</p>
+  </article>
+
+  <!-- CTA -->
+  <section style="background:#F0EFEB;padding:40px 40px 100px;">
+    <div style="max-width:720px;margin:0 auto;background:#0D0D10;border-radius:20px;padding:44px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;width:55%;height:100%;background:radial-gradient(ellipse 90% 100% at 0% 50%, rgba(144,43,41,0.62) 0%, rgba(144,43,41,0.2) 45%, transparent 80%);pointer-events:none;"></div>
+      <div style="position:relative;z-index:1;"><div style="font-size:22px;font-weight:700;color:#F0EFEB;letter-spacing:-0.02em;line-height:1.2;">Quer ver isso na sua operação?</div><div style="font-size:14px;color:#6B6B72;margin-top:6px;">Veja o potencial de economia identificado pela Arvo.</div></div>
+      <a href="Home.dc.html#contato" style="position:relative;z-index:1;font-size:14px;font-weight:600;color:#F0EFEB;background:#902B29;padding:14px 26px;border-radius:11px;text-decoration:none;white-space:nowrap;">Falar com um especialista</a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,440px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="responsive.css" />
+  <style>
+    body { margin:0; background:#0D0D10; -webkit-font-smoothing:antialiased; }
+    .arvo-lift { transition: transform 0.2s, box-shadow 0.2s; }
+    .arvo-lift:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(13,13,16,0.10); }
+  </style>
+</helmet>
+
+<div style="font-family:'Space Grotesk',system-ui,sans-serif;background:#F0EFEB;color:#0D0D10;overflow-x:hidden;min-height:100vh;">
+  <dc-import name="Nav" active="conteudos" hint-size="100%,68px"></dc-import>
+
+  <!-- HERO -->
+  <section style="background:#0D0D10;background-image:radial-gradient(ellipse 115% 92% at 50% 0%, rgba(144,43,41,0.82) 0%, rgba(144,43,41,0.34) 45%, transparent 85%);padding:160px 40px 80px;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FF4A2E;margin-bottom:22px;">Conteúdos · Cases de Sucesso</span>
+      <h1 style="font-size:clamp(38px,5vw,64px);font-weight:700;letter-spacing:-0.035em;line-height:1.05;color:#F0EFEB;max-width:880px;margin:0;">Resultados reais com as principais <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#E5C8C5;font-weight:400;">operadoras do Brasil.</em></h1>
+      <p style="font-size:clamp(16px,1.8vw,20px);font-weight:400;color:rgba(240,239,235,0.62);line-height:1.6;max-width:640px;margin:24px 0 0;">De autogestões a cooperativas, veja como a integridade de pagamentos da Arvo gera economia desde as primeiras semanas.</p>
+    </div>
+  </section>
+
+  <!-- FEATURED CASE -->
+  <section style="background:#F0EFEB;padding:64px 40px 32px;">
+    <div style="max-width:1160px;margin:0 auto;background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1.1fr 0.9fr;">
+      <div style="padding:52px 48px;">
+        <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#902B29;margin-bottom:16px;">Case em destaque · Autogestão</span>
+        <h2 style="font-size:clamp(26px,2.8vw,36px);font-weight:700;letter-spacing:-0.03em;line-height:1.15;color:#0D0D10;margin:0 0 20px;">Cemig: primeiro nível de economia em <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#902B29;font-weight:400;">15 dias.</em></h2>
+        <p style="font-size:16px;line-height:1.7;color:#6B6B72;margin:0 0 28px;">Com o apoio da tecnologia da Arvo, a Cemig colheu resultados relevantes com aumento expressivo no custo evitado com desperdícios — permitindo investir mais em assistência e no melhor cuidado com o beneficiário.</p>
+        <div style="display:flex;gap:40px;margin-bottom:28px;">
+          <div><div style="font-size:34px;font-weight:700;color:#902B29;letter-spacing:-0.03em;line-height:1;">15 dias</div><div style="font-size:13px;color:#6B6B72;margin-top:6px;">para o 1º nível de economia</div></div>
+          <div><div style="font-size:34px;font-weight:700;color:#902B29;letter-spacing:-0.03em;line-height:1;">+85%</div><div style="font-size:13px;color:#6B6B72;margin-top:6px;">de precisão nas críticas</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:48px;height:48px;border-radius:50%;overflow:hidden;border:2px solid rgba(144,43,41,0.3);"><img src="https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/69a9d73195df97c517d49970_anderson%20ferreira.png" alt="Anderson Ferreira" style="width:100%;height:100%;object-fit:cover;object-position:center top;" /></div>
+          <div><div style="font-size:14px;font-weight:700;color:#0D0D10;">Anderson Ferreira</div><div style="font-size:12px;color:#6B6B72;">Diretor Presidente · Cemig</div></div>
+        </div>
+      </div>
+      <div style="background:#0D0D10;background-image:radial-gradient(ellipse 90% 70% at 70% 30%, rgba(144,43,41,0.5) 0%, transparent 65%);padding:52px 48px;display:flex;align-items:center;">
+        <p style="font-size:clamp(18px,2vw,24px);font-weight:500;line-height:1.45;color:#F0EFEB;letter-spacing:-0.02em;margin:0;">"Isso nos permite investir mais em <em style="font-style:italic;font-family:'Playfair Display',Georgia,serif;color:#E5C8C5;font-weight:400;">assistência</em> e no melhor cuidado com o beneficiário."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRID DE CASES -->
+  <section style="background:#F0EFEB;padding:32px 40px 100px;">
+    <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <div class="arvo-lift" style="background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:18px;padding:32px;display:flex;flex-direction:column;gap:18px;">
+        <span style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B72;">Medicina de Grupo</span>
+        <div style="font-size:30px;font-weight:700;color:#902B29;letter-spacing:-0.03em;line-height:1;">Tempo real</div>
+        <p style="font-size:14px;line-height:1.65;color:#6B6B72;margin:0;flex:1;">"Agentes digitais analisam e criticam contas em grande escala. A solução nos permite evitar desperdícios e identificar tendências de risco."</p>
+        <div style="display:flex;align-items:center;gap:12px;border-top:1px solid rgba(13,13,16,0.08);padding-top:18px;"><div style="width:42px;height:42px;border-radius:50%;overflow:hidden;border:2px solid rgba(144,43,41,0.25);"><img src="https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/68e43e201b959a671f882aef_PJ.png" alt="Paulo Jorge Cardoso" style="width:100%;height:100%;object-fit:cover;object-position:center top;" /></div><div><div style="font-size:13px;font-weight:700;color:#0D0D10;">Paulo Jorge Cardoso</div><div style="font-size:11px;color:#6B6B72;">Athena Saúde</div></div></div>
+      </div>
+
+      <div class="arvo-lift" style="background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:18px;padding:32px;display:flex;flex-direction:column;gap:18px;">
+        <span style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B72;">Autogestão</span>
+        <div style="font-size:30px;font-weight:700;color:#902B29;letter-spacing:-0.03em;line-height:1;">Auditoria +eficiente</div>
+        <p style="font-size:14px;line-height:1.65;color:#6B6B72;margin:0;flex:1;">"As inteligências da Arvo se conectam a outros processos e sistemas, tornando a jornada de auditoria muito mais eficiente."</p>
+        <div style="display:flex;align-items:center;gap:12px;border-top:1px solid rgba(13,13,16,0.08);padding-top:18px;"><div style="width:42px;height:42px;border-radius:50%;overflow:hidden;border:2px solid rgba(144,43,41,0.25);"><img src="https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/68e43e20af43834559c69a7a_Regina.png" alt="Regina Mello" style="width:100%;height:100%;object-fit:cover;object-position:center top;" /></div><div><div style="font-size:13px;font-weight:700;color:#0D0D10;">Regina Mello</div><div style="font-size:11px;color:#6B6B72;">Vivest</div></div></div>
+      </div>
+
+      <div class="arvo-lift" style="background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:18px;padding:32px;display:flex;flex-direction:column;gap:18px;">
+        <span style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B72;">Cooperativa</span>
+        <div style="font-size:30px;font-weight:700;color:#902B29;letter-spacing:-0.03em;line-height:1;">Time qualificado</div>
+        <p style="font-size:14px;line-height:1.65;color:#6B6B72;margin:0;flex:1;">"Integrar novas tecnologias em negócios com legados é desafiador, mas a experiência com a Arvo foi muito prazerosa, acelerando os resultados."</p>
+        <div style="display:flex;align-items:center;gap:12px;border-top:1px solid rgba(13,13,16,0.08);padding-top:18px;"><div style="width:42px;height:42px;border-radius:50%;overflow:hidden;border:2px solid rgba(144,43,41,0.25);"><img src="https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/68e43f28fec1726d4adfa693_Rolim.png" alt="Luis Fernando Rolim" style="width:100%;height:100%;object-fit:cover;object-position:center top;" /></div><div><div style="font-size:13px;font-weight:700;color:#0D0D10;">Luis Fernando Rolim</div><div style="font-size:11px;color:#6B6B72;">Central Nacional Unimed</div></div></div>
+      </div>
+
+      <div class="arvo-lift" style="background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:18px;padding:32px;display:flex;flex-direction:column;gap:18px;">
+        <span style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B72;">Autogestão</span>
+        <div style="font-size:30px;font-weight:700;color:#902B29;letter-spacing:-0.03em;line-height:1;">Ganhos desde o início</div>
+        <p style="font-size:14px;line-height:1.65;color:#6B6B72;margin:0;flex:1;">"Com processos ágeis, proximidade e acompanhamento sistemático da implantação, a Arvo impactou positivamente nossa análise de contas médicas."</p>
+        <div style="display:flex;align-items:center;gap:12px;border-top:1px solid rgba(13,13,16,0.08);padding-top:18px;"><div style="width:42px;height:42px;border-radius:50%;overflow:hidden;border:2px solid rgba(144,43,41,0.25);"><img src="https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/6823b91503876e5fb426ed65_werner.avif" alt="Werner Dalla" style="width:100%;height:100%;object-fit:cover;object-position:center top;" /></div><div><div style="font-size:13px;font-weight:700;color:#0D0D10;">Werner Dalla</div><div style="font-size:11px;color:#6B6B72;">Abertta Saúde</div></div></div>
+      </div>
+
+      <div class="arvo-lift" style="background:#fff;border:1px solid rgba(13,13,16,0.08);border-radius:18px;padding:32px;display:flex;flex-direction:column;gap:18px;">
+        <span style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B72;">Autogestão</span>
+        <div style="font-size:30px;font-weight:700;color:#902B29;letter-spacing:-0.03em;line-height:1;">Combate a fraude</div>
+        <p style="font-size:14px;line-height:1.65;color:#6B6B72;margin:0;flex:1;">"O processo da Arvo tem nos ajudado no combate à fraude, má utilização e desperdícios. Não dá pra pensar em sustentabilidade sem este tipo de ferramenta."</p>
+        <div style="display:flex;align-items:center;gap:12px;border-top:1px solid rgba(13,13,16,0.08);padding-top:18px;"><div style="width:42px;height:42px;border-radius:50%;overflow:hidden;border:2px solid rgba(144,43,41,0.25);"><img src="https://cdn.prod.website-files.com/63c08b822401871f2e814ff1/66d5f3348209757fc1e5f307_frederico-cruz.avif" alt="Frederico Cruz" style="width:100%;height:100%;object-fit:cover;object-position:center top;" /></div><div><div style="font-size:13px;font-weight:700;color:#0D0D10;">Frederico Cruz</div><div style="font-size:11px;color:#6B6B72;">Saúde Petrobras</div></div></div>
+      </div>
+
+      <a href="Home.dc.html#contato" class="arvo-lift" style="background:#902B29;border:1px solid transparent;border-radius:18px;padding:32px;display:flex;flex-direction:column;justify-content:center;gap:14px;text-decoration:none;">
+        <div style="font-size:22px;font-weight:700;color:#F0EFEB;letter-spacing:-0.02em;line-height:1.2;">Sua operadora pode ser o próximo case.</div>
+        <p style="font-size:14px;line-height:1.6;color:rgba(240,239,235,0.82);margin:0;">Veja o potencial de economia identificado pela Arvo na sua operação.</p>
+        <span style="font-size:14px;font-weight:600;color:#F0EFEB;margin-top:4px;">Falar com um especialista →</span>
+      </a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,440px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

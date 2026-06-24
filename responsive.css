@@ -1,0 +1,70 @@
+/* ===========================================================
+   Arvo — responsividade global
+   Estilos do site são inline; aqui sobrescrevemos por media
+   queries usando seletores de atributo + !important.
+   =========================================================== */
+
+/* ---------- Nav mobile (hambúrguer) ---------- */
+.nav-burger { display: none; }
+.nav-mobile { display: none; }
+
+@media (max-width: 860px) {
+  nav { padding-left: 20px !important; padding-right: 20px !important; }
+  .nav-links { display: none !important; }
+  .nav-cta   { display: none !important; }
+  .nav-burger { display: flex !important; }
+}
+
+/* painel mobile só pode aparecer abaixo de 860px (o inline controla aberto/fechado) */
+@media (min-width: 861px) {
+  .nav-mobile { display: none !important; }
+}
+
+/* ---------- Tablet / notebook estreito ---------- */
+@media (max-width: 1024px) {
+  [style*="repeat(4,"] { grid-template-columns: repeat(2, 1fr) !important; }
+  [style*="repeat(3,"] { grid-template-columns: repeat(2, 1fr) !important; }
+  /* rodapé 5 colunas -> 3 */
+  [style*="1.8fr 1fr 1fr 1fr 1fr"] { grid-template-columns: 1fr 1fr 1fr !important; gap: 32px !important; }
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 760px) {
+  /* todas as grades viram 1 coluna */
+  [style*="repeat(4,"],
+  [style*="repeat(3,"],
+  [style*="repeat(2,"]            { grid-template-columns: 1fr !important; }
+  [style*="grid-template-columns: 1fr 1fr"]   { grid-template-columns: 1fr !important; }
+  [style*="grid-template-columns: 1.1fr"]     { grid-template-columns: 1fr !important; }
+  [style*="grid-template-columns: 1.15fr"]    { grid-template-columns: 1fr !important; }
+  [style*="grid-template-columns: 1fr 1.7fr 1fr"] { grid-template-columns: 1fr !important; }
+  /* rodapé -> 2 colunas */
+  [style*="1.8fr 1fr 1fr 1fr 1fr"] { grid-template-columns: 1fr 1fr !important; gap: 28px 24px !important; }
+
+  /* respiro lateral mais justo */
+  section { padding-left: 20px !important; padding-right: 20px !important; }
+  footer  { padding-left: 24px !important; padding-right: 24px !important; }
+
+  /* topos de hero muito altos (atrás do nav fixo) */
+  [style*="padding: 160px"] { padding-top: 108px !important; padding-bottom: 56px !important; }
+  [style*="padding: 150px"] { padding-top: 104px !important; }
+
+  /* paddings internos grandes de cards/CTAs */
+  [style*="padding: 64px 56px"] { padding: 36px 24px !important; }
+  [style*="padding: 52px 48px"] { padding: 32px 22px !important; }
+  [style*="padding: 48px 48px"] { padding: 28px 22px !important; }
+
+  /* fotos de time com altura fixa -> menores */
+  [style*="clamp(340px, 38vw, 500px)"] { height: 230px !important; }
+
+  /* CTA final da home: empilha e alinha à esquerda */
+  .home-cta-card { grid-template-columns: 1fr !important; gap: 28px !important; padding: 40px 26px !important; }
+  .home-cta-card [style*="flex-direction:column"],
+  .home-cta-card [style*="flex-direction: column"] { align-items: stretch !important; }
+  .home-cta-card button { width: 100% !important; text-align: center !important; }
+}
+
+/* ---------- Celular pequeno ---------- */
+@media (max-width: 420px) {
+  [style*="1.8fr 1fr 1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
+}
